@@ -67,5 +67,10 @@
 		"uncss": "^0.14.1",
 		"useref": "^1.2.0",
 		"useref-cli": "^1.0.0"
+	},
+	"dependencies": {
+		"font-awesome": "^4.7.0",
+		"imperavi-kube": "^6.5.2",
+		"responsimple": "^1.0.1"
 	}
 }
