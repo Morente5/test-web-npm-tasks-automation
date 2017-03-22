@@ -41,5 +41,31 @@
 		"proxy": "browser-sync start --proxy localhost --directory --startPath /TallerFrontend2017/codigos/npm-workflows/npm-frontend-boilerplate --serveStatic / --files dist --reload-delay=300 --reload-debounce=500"
 	},
 	"author": "Alejandro Morente <morente5@hotmail.es>",
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"autoprefixer": "^6.7.7",
+		"babel-cli": "^6.24.0",
+		"babel-preset-latest": "^6.24.0",
+		"browser-sync": "^2.18.8",
+		"buildify": "^0.4.0",
+		"copy": "^0.3.0",
+		"html-minifier": "^3.4.2",
+		"imagemin": "^5.2.2",
+		"imagemin-cli": "^3.0.0",
+		"imagemin-gifsicle": "^5.1.0",
+		"imagemin-jpeg-recompress": "^5.1.0",
+		"imagemin-pngquant": "^5.0.0",
+		"imagemin-svgo": "^5.2.0",
+		"imagemin-webp": "^4.0.0",
+		"mkdirp": "^0.5.1",
+		"node-sass": "^4.5.1",
+		"parallelshell": "^2.0.0",
+		"postcss-cli": "^3.0.0",
+		"pug": "^2.0.0-beta11",
+		"pug-cli": "^1.0.0-alpha6",
+		"rimraf": "^2.6.1",
+		"uncss": "^0.14.1",
+		"useref": "^1.2.0",
+		"useref-cli": "^1.0.0"
+	}
 }
