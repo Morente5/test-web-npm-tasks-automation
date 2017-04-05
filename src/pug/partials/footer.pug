@@ -1,0 +1,38 @@
+footer.footer
+	.container
+		.columns
+			.column.content.is-3
+				h3.content.is-medium Braun Marketing & Consulting
+				each category, cat_name in menu.categories
+					p
+						a(href="/"+category.slug)= cat_name
+			.column.content.is-3
+					h3.content.is-medium Sobre nosotros
+					p
+						a Política de privacidad y cookies
+			.column.content.is-4
+					h3.content.is-medium Contacto
+					p
+						span.icon
+							i.fa.fa-envelope
+						span contacto<wbr>@braunmarketingandconsulting.es
+					p
+						span.icon
+							i.fa.fa-phone
+						span 000 111 222
+					p
+						span.icon
+							i.fa.fa-building
+						span Dirección
+					h3.content.is-medium Redes sociales
+					span.icon
+						i.fa.fa-facebook
+					span.icon
+						i.fa.fa-twitter
+
+			.column.content.is-2
+					h3.content.is-medium Auditoría GRATIS
+					p
+						.field.toggle-on-form
+							p.control
+								a.button.is-info Pedir auditoría

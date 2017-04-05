@@ -1,0 +1,13 @@
+include /mixins/navbar
+include /mixins/header-text
+include /mixins/topbar
+include /mixins/mobile-menu
+
+mixin layout(menu, active, text)
+
+    block body
+        +mobile-menu(menu, active)
+        header.hero.is-fullheight.is-primary.is-bold
+            +topbar
+            +header-text(text)
+            //- +navbar(menu, active)

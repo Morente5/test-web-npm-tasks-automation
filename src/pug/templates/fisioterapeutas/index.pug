@@ -1,0 +1,99 @@
+extends /partials/html-layout
+include /mixins/layout.pug
+
+block body
+	- var active= {"category": "Fisioterapeutas", "service": null}
+	+layout(menu, active, "Fisioterapeutas")
+	#content-wrapper
+		section.hero
+			.hero-body
+				.container
+					h2.title.is-spaced Servicios para Fisioterapeutas
+			span.nav-wrapper
+				.hero-body#nav-categories.is-sticky.hero
+					.container
+						.tabs.is-centered.is-medium.is-boxed.columns
+							each service, ser_name in menu.categories[active.category].services
+								.column: a(href="/"+menu.categories[active.category].slug+"/"+service.slug, class=(ser_name == active.service) ? 'is-active' : 'is-hidden-mobile')= ser_name
+
+							//- else
+		//-   nav.tabs.is-boxed.is-fullwidth.is-medium#nav-categories
+		//-     ul
+		//-       each category, cat_name in menu.categories
+		//-         li(class=(cat_name == active.category) ? 'is-active' : 'is-hidden-mobile')
+		//-           a(href="/"+category.slug)= cat_name
+		section.hero.is-primary
+			.hero-body
+				.container
+					h2.title La prensa habla de nosotros
+					.columns
+						.column
+							.card.news
+								header.card-header
+									p.card-header-title.is-center
+										img(src="/img/logoC.png")
+								.card-content
+									.content
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta facere praesentium, nobis velit possimus nisi rerum aliquid est earum voluptatibus doloribus ducimus aut error, minus! Deserunt ducimus nam, suscipit illum.
+										p: small 1 Abril 2017
+								footer.card-footer
+
+									a(rel="nofollow").card-footer-item Ir a la noticia
+						.column
+							.card.news
+								header.card-header
+									p.card-header-title.is-center
+										img(src="/img/header-site-logo.svg")
+								.card-content
+									.content
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur vel facilis doloremque sit tenetur rem quia, atque ullam, natus sunt modi quae praesentium qui facere maxime nam quidem. Fugit, dolor.
+										p: small 1 Abril 2017
+								footer.card-footer
+
+									a(rel="nofollow").card-footer-item Ir a la noticia
+						.column
+							.card.news
+								header.card-header
+									p.card-header-title.is-center
+										img(src="/img/granadadigital.png")
+								.card-content
+									.content
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+										p: small 1 Abril 2017
+								footer.card-footer
+
+									a(rel="nofollow").card-footer-item Ir a la noticia
+
+		section.hero
+			.hero-body
+				.container.has-text-centered
+					h2.title Te auditamos tu web GRATIS
+					.field.url
+						p
+							input.input.is-large.from-url(type='url', placeholder='Introduce tu URL')
+					.field.toggle-on-form
+						p
+							a.button.is-info.is-large.is-centered Auditoría GRATIS
+
+		section.hero.is-primary
+			.hero-body
+				.container
+					h2.title Testimonios
+					article.media
+						figure.media-left
+							p.image.is-128x128
+								img(src='http://bulma.io/images/placeholders/128x128.png')
+						.media-content
+							p.subtitle: strong John Smith
+							p.quote.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quae tempora vitae magnam temporibus qui expedita reiciendis saepe quam voluptatibus veritatis, sapiente cupiditate molestiae dolorem, est rerum nemo modi sit?
+					article.media
+						figure.media-left
+							p.image.is-128x128
+								img(src='http://bulma.io/images/placeholders/128x128.png')
+						.media-content
+							p.subtitle: strong John Smith
+							p.quote.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos illum aperiam similique. Libero, quaerat. Sequi veniam a ipsum praesentium laudantium modi hic nostrum fugiat, numquam sint exercitationem cupiditate accusamus inventore!
+
+		include /partials/footer
+
+	include /partials/form

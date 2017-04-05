@@ -1,0 +1,20 @@
+mixin mobile-menu(menu, active)
+	aside.menu.is-medium.is-hidden.is-hidden-tablet.animated.slideOutLeft
+		ul.menu-list
+			if active.category
+				li
+					a.is-active= active.category
+					ul.animated
+						each service, ser_name in menu.categories[active.category].services
+							li
+								a(href="/"+menu.categories[active.category].slug+"/"+service.slug, class=(ser_name == active.service) ? 'is-active' : '')= ser_name
+			else
+				each category, cat_name in menu.categories
+					li
+						a(href="/"+category.slug)= cat_name
+							span.icon.is-pulled-right
+								i.dropdown-icon.fa.fa-caret-down
+						ul.animated(style='display:none;')
+							each service, ser_name in category.services
+								li
+									a(href="/"+category.slug+"/"+service.slug)= ser_name

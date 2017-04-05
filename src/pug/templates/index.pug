@@ -1,0 +1,122 @@
+extends /partials/html-layout
+include /mixins/layout.pug
+
+block body
+	+layout(menu, {"category": null, "service": null}, "Consultora estratégica de negocio y Agencia de Marketing online especializada en el Sector Sanitario")
+	#content-wrapper
+		section.hero
+			.hero-body
+				.container
+					h2.title ¿Debo invertir en una consultora estratégica y agencia de marketing online especializada en el sector sanitario?
+					.columns
+						.column
+							p 60% de los internautas realizan búsquedas Sanitarias
+						.column
+							p 1,2 millones de búsquedas mensuales relacionadas con salud
+						.column
+							p 90% busca su dolencia en internet
+						.column
+							p ¿Sabes lo mejor de todo?
+							p El 75% no pasa de la primera página de Google.
+		section.hero.is-primary
+			.hero-body
+				.container
+					h2.title.is-spaced Nuestras acciones de Marketing online y consultoría harán que tus clientes te encuentren entre los primeros resultados
+					h3.subtitle ¿Crees que hoy en día con tus conocimientos y experiencia es suficiente?
+			span.nav-wrapper
+				.hero-body#nav-categories.is-sticky.hero.is-primary
+					.container
+						.tabs.is-centered.is-medium.is-boxed.columns
+							each category, cat_name in menu.categories
+								.column: a(href="/"+category.slug)= cat_name
+
+
+
+							//- else
+		//-   nav.tabs.is-boxed.is-fullwidth.is-medium#nav-categories
+		//-     ul
+		//-       each category, cat_name in menu.categories
+		//-         li(class=(cat_name == active.category) ? 'is-active' : 'is-hidden-mobile')
+		//-           a(href="/"+category.slug)= cat_name
+		section.hero
+			.hero-body
+				.container
+					h2.title La prensa habla de nosotros
+					.columns
+						.column
+							.card.news
+								header.card-header
+									p.card-header-title.is-center
+										img(src="/img/logoC.png")
+								.card-content
+									.content
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta facere praesentium, nobis velit possimus nisi rerum aliquid est earum voluptatibus doloribus ducimus aut error, minus! Deserunt ducimus nam, suscipit illum.
+										p: small 1 Abril 2017
+								footer.card-footer
+
+									a(href="", rel="nofollow").card-footer-item Ir a la noticia
+						.column
+							.card.news
+								header.card-header
+									p.card-header-title.is-center
+										img(src="/img/header-site-logo.svg")
+								.card-content
+									.content
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur vel facilis doloremque sit tenetur rem quia, atque ullam, natus sunt modi quae praesentium qui facere maxime nam quidem. Fugit, dolor.
+										p: small 1 Abril 2017
+								footer.card-footer
+
+									a(href="", rel="nofollow").card-footer-item Ir a la noticia
+						.column
+							.card.news
+								header.card-header
+									p.card-header-title.is-center
+										img(src="/img/granadadigital.png")
+								.card-content
+									.content
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+										p: small 1 Abril 2017
+								footer.card-footer
+
+									a(href="", rel="nofollow").card-footer-item Ir a la noticia
+
+		section.hero.is-primary
+			.hero-body
+				.container.has-text-centered
+					h2.title Te auditamos tu web GRATIS
+					.field.url
+						p
+							input.input.is-large.from-url(type='url', placeholder='Introduce tu URL')
+					.field.toggle-on-form
+						p
+							a.button.is-info.is-large.is-centered Auditoría GRATIS
+		section.hero
+			.hero-body
+				.container
+					.columns
+						.column.is-vertically-centered
+							h2.title La transparencia y la consistencia constituyen dos valores que guiarán nuestros procesos de Consultoría y Marketing Online
+						.column
+							img(src="/img/glass-ball.jpg")
+		section.hero.is-primary
+			.hero-body
+				.container
+					h2.title Testimonios
+					article.media
+						figure.media-left
+							p.image.is-128x128
+								img(src='http://bulma.io/images/placeholders/128x128.png')
+						.media-content
+							p.subtitle: strong John Smith
+							p.quote.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quae tempora vitae magnam temporibus qui expedita reiciendis saepe quam voluptatibus veritatis, sapiente cupiditate molestiae dolorem, est rerum nemo modi sit?
+					article.media
+						figure.media-left
+							p.image.is-128x128
+								img(src='http://bulma.io/images/placeholders/128x128.png')
+						.media-content
+							p.subtitle: strong John Smith
+							p.quote.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos illum aperiam similique. Libero, quaerat. Sequi veniam a ipsum praesentium laudantium modi hic nostrum fugiat, numquam sint exercitationem cupiditate accusamus inventore!
+
+		include /partials/footer
+
+	include /partials/form

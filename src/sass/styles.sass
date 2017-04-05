@@ -1,0 +1,152 @@
+@import 'vars'
+@import 'bulma/bulma'
+@import 'font-awesome/scss/font-awesome'
+@import 'animate.css/animate'
+
+header.hero
+	//background-image: url(../img/Master-en-gestion-de-clinicas.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	.hero-body
+		//min-padding: 3rem 1.5rem;
+		&.container
+			//padding: 0
+		.columns
+			width: 100%
+
+html
+	overflow: auto!important
+
+body
+	overflow-x: hidden
+
+aside.menu
+	position: absolute
+	background-color: white
+	width: 100%
+	z-index: 200
+	top: 52px
+	min-height: calc(100vh - 52px)
+	.menu-list
+		a
+			line-height: 1.75
+			font-size: 1.25rem
+
+.is-not-scrollable
+	overflow: hidden!important
+
+.is-brand
+	margin: 0px 12px
+	padding: 0
+	img
+		height: 52px
+		max-height: initial
+		width: auto
+
+.is-sticky
+	z-index: 100
+	//width: 100%
+
+.is-fixed
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+
+.nav-item
+	a
+		flex-grow: 0
+	img
+		max-width: auto!important
+
+.card-header-title
+	max-height: 60px
+	img
+		max-height: 40px
+
+.nav-logo
+	overflow-x: hidden
+	img
+		z-index: 101
+
+a.nav-item.social
+	padding: 6px 6px
+
+.nav-form
+	max-width: 150%
+	padding-left: 0
+
+nav .field.url
+	input
+		width: initial
+
+#nav-categories
+	//height: 52px
+	padding: 48px 0
+	&:not(:last-child)
+		margin-bottom: 0
+	&.is-fixed
+		padding: 0
+
+.nav-wrapper
+	//height: 52px
+.news
+	.card-header-title
+		img
+			margin: auto
+
+.menu.is-sticky.is-fixed
+	//background-color: darkgrey
+
+footer
+	.icon
+		margin: 3px
+
+.modal-card-head, .modal-card-foot
+	border: 0
+	border-radius: 0
+
+.media-content
+	p.quote:before
+		content: "«"
+	p.quote:after
+		content: "»"
+
+.modal-background
+
+.column.is-vertically-centered
+	margin: auto
+
+::-webkit-scrollbar
+	width: 8px!important
+	height: 8px!important
+	&-thumb
+    background-color: darkgrey;
+
+input.from-url
+	width: 50%
+
+@media screen and (max-width: 980px)
+	#nav-categories
+		.tabs
+			display: block
+		&.is-fixed
+			position: relative
+			padding: 48 0
+			top: inherit
+			left: inherit
+
+@media screen and (max-width: 768px)
+	.nav-form
+		justify-content: flex-end
+	input.from-url
+		width: 100%
+
+@media screen and (max-width: 600px)
+	.nav-item.is-brand
+		display: none
+
+@media screen and (max-width: 420px)
+	.nav-item.social.phone
+		display: none
+
