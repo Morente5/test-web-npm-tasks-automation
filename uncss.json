@@ -1,12 +1,9 @@
 {
     "ignore": [
-        ".is-hidden",
-        ".is-active"
     ],
     "stylesheets": [
-        "./css/styles.css"
     ],
     "ignoreSheets": [
-
+        "./dist/css/styles.css"
     ]
 }

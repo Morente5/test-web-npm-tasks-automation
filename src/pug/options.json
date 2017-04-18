@@ -11,115 +11,145 @@
         "categories": {
             "Médicos": {
                 "services": {
-                    "Servicio Médico 1": {
-                        "slug": "sm1"
+                    "Posicionamiento Natural": {
+                        "slug": "posicionamiento-natural"
                     },
-                    "Servicio Médico 2": {
-                        "slug": "sm2"
+                    "SEM": {
+                        "slug": "sem"
                     },
-                    "Servicio Médico 3": {
-                        "slug": "sm3"
+                    "Healthcare Benchmarking": {
+                        "slug": "healthcare-benchmarking"
                     },
-                    "Servicio Médico 4": {
-                        "slug": "sm4"
+                    "Diseño Web": {
+                        "slug": "diseno-web"
                     },
-                    "Servicio Médico 5": {
-                        "slug": "sm5"
+                    "Analítica Web": {
+                        "slug": "analitica-web"
                     },
-                    "Servicio Médico 6": {
-                        "slug": "sm6"
+                    "Social Media Marketing": {
+                        "slug": "social-media-marketing"
+                    },
+                    "Reputación Online Médica": {
+                        "slug": "reputacion-online-medica"
+                    },
+                    "Consultoría": {
+                        "slug": "consultoria"
                     }
                 },
                 "slug": "medicos"
             },
             "Fisioterapeutas": {
                 "services": {
-                    "Servicio Fisio 1": {
-                        "slug": "sfis1"
+                    "Posicionamiento SEO": {
+                        "slug": "posicionamiento-seo"
                     },
-                    "Servicio Fisio 2": {
-                        "slug": "sfis2"
+                    "Search Engine Marketing": {
+                        "slug": "search-engine-marketing"
                     },
-                    "Servicio Fisio 3": {
-                        "slug": "sfis3"
+                    "Benchmarking": {
+                        "slug": "benchmarking"
                     },
-                    "Servicio Fisio 4": {
-                        "slug": "sfis4"
+                    "Desarrollo Web": {
+                        "slug": "desarrollo-web"
                     },
-                    "Servicio Fisio 5": {
-                        "slug": "sfis5"
+                    "Análisis web": {
+                        "slug": "analisis-web"
                     },
-                    "Servicio Fisio 6": {
-                        "slug": "sfis6"
+                    "Social Marketing": {
+                        "slug": "social-marketing"
+                    },
+                    "Gestión de Reputación Online": {
+                        "slug": "gestion-de-reputacion-online"
+                    },
+                    "Consultoría Estratégica": {
+                        "slug": "consultoria-estrategica"
                     }
                 },
                 "slug": "fisioterapeutas"
             },
             "Odontólogos": {
                 "services": {
-                    "Servicio Odontólogos 1": {
-                        "slug": "so1"
+                    "Posicionamiento Web": {
+                        "slug": "posicionamiento-web"
                     },
-                    "Servicio Odontólogos 2": {
-                        "slug": "so2"
+                    "Google Adwords": {
+                        "slug": "google-adwords"
                     },
-                    "Servicio Odontólogos 3": {
-                        "slug": "so3"
+                    "Benchmarking Odontológico": {
+                        "slug": "benchmarking-odontologico"
                     },
-                    "Servicio Odontólogos 4": {
-                        "slug": "so4"
+                    "Diseño Página Web": {
+                        "slug": "diseno-pagina-web"
                     },
-                    "Servicio Odontólogos 5": {
-                        "slug": "so5"
+                    "Analytics Google": {
+                        "slug": "analytics-google"
                     },
-                    "Servicio Odontólogos 6": {
-                        "slug": "so6"
+                    "Community Manager": {
+                        "slug": "community-manager"
+                    },
+                    "Gestión Marca Online": {
+                        "slug": "gestion-marca-online"
+                    },
+                    "Consultoría Empresarial": {
+                        "slug": "consultoria-empresarial"
                     }
                 },
                 "slug": "odontologos"
             },
             "Farmacéuticos": {
                 "services": {
-                    "Servicio Farma 1": {
-                        "slug": "sfarma1"
+                    "Posicionamiento en Buscadores": {
+                        "slug": "posicionamiento-en-buscadores"
                     },
-                    "Servicio Farma 2": {
-                        "slug": "sfarma2"
+                    "Google Ads": {
+                        "slug": "google-ads"
                     },
-                    "Servicio Farma 3": {
-                        "slug": "sfarma3"
+                    "Benchmarking Farmacéutico": {
+                        "slug": "benchmarking-farmaceutico"
                     },
-                    "Servicio Farma 4": {
-                        "slug": "sfarma4"
+                    "Crear Página Web": {
+                        "slug": "crear-pagina-web"
                     },
-                    "Servicio Farma 5": {
-                        "slug": "sfarma5"
+                    "Google Analytics": {
+                        "slug": "google-analytics"
                     },
-                    "Servicio Farma 6": {
-                        "slug": "sfarma6"
+                    "Redes Sociales": {
+                        "slug": "redes-sociales"
+                    },
+                    "Reputación Online": {
+                        "slug": "reputacion-online"
+                    },
+                    "Consultoría de Negocio": {
+                        "slug": "consultoria-de-negocio"
                     }
                 },
                 "slug": "farmaceuticos"
             },
             "Veterinarios": {
                 "services": {
-                    "Servicio Vat 1": {
-                        "slug": "sv1"
+                    "SEO Local": {
+                        "slug": "seo-local"
                     },
-                    "Servicio Vat 2": {
-                        "slug": "sv2"
+                    "PPC": {
+                        "slug": "ppc"
                     },
-                    "Servicio Vat 3": {
-                        "slug": "sv3"
+                    "Benchmarking Veterinario": {
+                        "slug": "benchmarking-veterinario"
                     },
-                    "Servicio Vat 4": {
-                        "slug": "sv4"
+                    "Maquetación Web": {
+                        "slug": "maquetacion-web"
                     },
-                    "Servicio Vat 5": {
-                        "slug": "sv5"
+                    "Analytics Web": {
+                        "slug": "analytics-web"
                     },
-                    "Servicio Vat 6": {
-                        "slug": "sv6"
+                    "Social Media Plan": {
+                        "slug": "social-media-plan"
+                    },
+                    "ORM": {
+                        "slug": "orm"
+                    },
+                    "Asesoramiento Empresarial": {
+                        "slug": "asesoramiento-empresarial"
                     }
                 },
                 "slug": "veterinarios"

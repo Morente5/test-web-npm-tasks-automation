@@ -20,6 +20,30 @@ html
 body
 	overflow-x: hidden
 
+.has-shadow
+	box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1)
+
+.page
+	.title
+		&:not(:first-child)
+			margin-top: 32px
+
+.content
+	ol[type="a"]
+		list-style-type: lower-alpha!important
+
+.services-wrapper
+	background-color: $primary
+
+.is-white
+	color: #fff
+
+.is-rounded
+	border-radius: 50%
+
+.columns.align-bottom
+	align-items: flex-end
+
 aside.menu
 	position: absolute
 	background-color: white
@@ -31,6 +55,9 @@ aside.menu
 		a
 			line-height: 1.75
 			font-size: 1.25rem
+			border-radius: 0
+		.icon
+			height: 2.25rem
 
 .is-not-scrollable
 	overflow: hidden!important
@@ -47,11 +74,30 @@ aside.menu
 	z-index: 100
 	//width: 100%
 
+.is-service-sticky
+	z-index: 101
+	background-color: $primary
+
+.is-service-sticky.is-fixed
+	.title-wrapper
+		animation: glow .5s infinite alternate
+		&:hover
+			animation: none
+
+@keyframes glow
+	to
+		text-shadow: 0 0 10px white
+
 .is-fixed
 	position: fixed
 	top: 0
 	left: 0
 	right: 0
+	#nav-services
+		width: 100%
+		position: absolute
+		background-color: $primary
+
 
 .nav-item
 	a
@@ -82,11 +128,32 @@ nav .field.url
 
 #nav-categories
 	//height: 52px
-	padding: 48px 0
+	padding: 0 0 48 0
 	&:not(:last-child)
 		margin-bottom: 0
+	.columns
+		text-align: center
 	&.is-fixed
 		padding: 0
+		a
+			display: inline-block
+	img.category-icon
+		width: 96px
+		margin: 16px
+	&:not(.is-fixed)
+		a
+			display: block
+
+#nav-services
+	padding: 0 0 48 0
+	.tabs
+		display: inline-block
+		white-space: initial;
+
+		ul
+			display: inline-block
+			li
+				display: inline-block
 
 .nav-wrapper
 	//height: 52px
@@ -97,10 +164,6 @@ nav .field.url
 
 .menu.is-sticky.is-fixed
 	//background-color: darkgrey
-
-footer
-	.icon
-		margin: 3px
 
 .modal-card-head, .modal-card-foot
 	border: 0
@@ -121,10 +184,13 @@ footer
 	width: 8px!important
 	height: 8px!important
 	&-thumb
-    background-color: darkgrey;
+		background-color: $primary
 
 input.from-url
 	width: 50%
+
+.tabs.is-boxed a:hover
+	border-bottom-color: transparent
 
 @media screen and (max-width: 980px)
 	#nav-categories
@@ -135,6 +201,19 @@ input.from-url
 			padding: 48 0
 			top: inherit
 			left: inherit
+		a
+			display: block
+		img.category-icon
+			width: 96px!important
+			margin: 16px!important
+	#nav-services
+		padding: 0 0 48 0
+		.tabs
+			width: 100%
+			ul
+				display: block
+				li
+					display: block
 
 @media screen and (max-width: 768px)
 	.nav-form
@@ -150,3 +229,160 @@ input.from-url
 	.nav-item.social.phone
 		display: none
 
+.abs-container
+	position: relative
+	background-size: cover
+	.absolute-full
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: $primary
+		opacity: .6
+
+footer.footer
+	background-image: url('/img/edseSku.jpg')
+	a
+		line-height: 2rem
+	h3:not(:first-child)
+		margin-top: 2rem
+	.icon
+		margin: 6
+
+#auditoria
+	background-image: url('/img/auditoria.jpg')
+
+header.hero.abs-container
+	background-size: cover
+	nav
+		background-color: $primary
+
+	.absolute-full
+		opacity: .6
+	&#header
+		&-inicio
+			background-image: url('/img/oficina-moderna.jpg')
+		&-médicos
+			background-image: url('/img/oficina-moderna.jpg')
+			&-posicionamiento-natural
+				background-image: url('/img/oficina-moderna.jpg')
+			&-sem
+				background-image: url('/img/oficina-moderna.jpg')
+			&-healthcare-benchmarking
+				background-image: url('/img/oficina-moderna.jpg')
+			&-diseño-web
+				background-image: url('/img/oficina-moderna.jpg')
+			&-analítica-web
+				background-image: url('/img/oficina-moderna.jpg')
+			&-social-media-marketing
+				background-image: url('/img/oficina-moderna.jpg')
+			&-reputación-online-médica
+				background-image: url('/img/oficina-moderna.jpg')
+			&-consultoría
+				background-image: url('/img/oficina-moderna.jpg')
+		&-fisioterapeutas
+			background-image: url('/img/oficina-moderna.jpg')
+			&-posicionamiento-seo
+				background-image: url('/img/oficina-moderna.jpg')
+			&-search-engine-marketing
+				background-image: url('/img/oficina-moderna.jpg')
+			&-benchmarking
+				background-image: url('/img/oficina-moderna.jpg')
+			&-desarrollo-web
+				background-image: url('/img/oficina-moderna.jpg')
+			&-análisis-web
+				background-image: url('/img/oficina-moderna.jpg')
+			&-social-marketing
+				background-image: url('/img/oficina-moderna.jpg')
+			&-gestión-de-reputación-online
+				background-image: url('/img/oficina-moderna.jpg')
+			&-consultoría-estratégica
+				background-image: url('/img/oficina-moderna.jpg')
+		&-odontólogos
+			background-image: url('/img/oficina-moderna.jpg')
+			&-posicionamiento-web
+				background-image: url('/img/oficina-moderna.jpg')
+			&-google-adwords
+				background-image: url('/img/oficina-moderna.jpg')
+			&-benchmarking-odontológico
+				background-image: url('/img/oficina-moderna.jpg')
+			&-diseño-página-web
+				background-image: url('/img/oficina-moderna.jpg')
+			&-analytics-google
+				background-image: url('/img/oficina-moderna.jpg')
+			&-community-manager
+				background-image: url('/img/oficina-moderna.jpg')
+			&-gestión-marca-online
+				background-image: url('/img/oficina-moderna.jpg')
+			&-consultoría-empresarial
+				background-image: url('/img/oficina-moderna.jpg')
+		&-farmacéuticos
+			background-image: url('/img/oficina-moderna.jpg')
+			&-posicionamiento-en-buscadores
+				background-image: url('/img/oficina-moderna.jpg')
+			&-google-ads
+				background-image: url('/img/oficina-moderna.jpg')
+			&-benchmarking-farmacéutico
+				background-image: url('/img/oficina-moderna.jpg')
+			&-crear-página-web
+				background-image: url('/img/oficina-moderna.jpg')
+			&-google-analytics
+				background-image: url('/img/oficina-moderna.jpg')
+			&-redes-sociales
+				background-image: url('/img/oficina-moderna.jpg')
+			&-reputación-online
+				background-image: url('/img/oficina-moderna.jpg')
+			&-consultoría-de-negocio
+				background-image: url('/img/oficina-moderna.jpg')
+		&-veterinarios
+			background-image: url('/img/oficina-moderna.jpg')
+			&-seo-local
+				background-image: url('/img/oficina-moderna.jpg')
+			&-ppc
+				background-image: url('/img/oficina-moderna.jpg')
+			&-benchmarking-veterinario
+				background-image: url('/img/oficina-moderna.jpg')
+			&-maquetación-web
+				background-image: url('/img/oficina-moderna.jpg')
+			&-analytics-web
+				background-image: url('/img/oficina-moderna.jpg')
+			&-social-media-plan
+				background-image: url('/img/oficina-moderna.jpg')
+			&-orm
+				background-image: url('/img/oficina-moderna.jpg')
+			&-asesoramiento-empresarial
+				background-image: url('/img/oficina-moderna.jpg')
+
+
+#modal-form
+	.modal-card-head, .modal-card-foot
+		background-color: $primary
+	.modal-card-title
+		color: #fff
+	.modal-background
+		background-color: rgba(#2e3748, 0.86)
+
+@media screen and (min-width: 769px)
+	#text-left-img-right
+		position: relative
+		.column
+			margin: auto
+		img
+			margin-top: -48px
+			margin-bottom: -48px
+			margin-right: -24px
+
+.container-left
+	position: relative
+@media screen and (min-width: 1000px)
+	.container-left
+		margin: 0 0 0 auto
+		width: 480px
+
+@media screen and (min-width: 1192px)
+	.container-left
+		width: 576px
+@media screen and (min-width: 1384px)
+	.container-left
+		width: 672px

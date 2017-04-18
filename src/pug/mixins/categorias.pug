@@ -1,0 +1,16 @@
+mixin categorias(title, ...subtitles)
+	section.hero.is-primary
+		.hero-body
+			.container
+				h2.title.is-spaced= title
+				for sub in subtitles
+					h3.subtitle= sub
+		span.nav-wrapper
+			.hero-body#nav-categories.is-sticky.hero.is-primary.has-shadow
+				.container
+					.tabs.is-medium.is-toggle.columns
+						each category, cat_name in menu.categories
+							.column
+								a(href="/"+category.slug)
+									div= cat_name
+									div: img.category-icon(src="/img/"+ category.slug +".svg", alt=cat_name)

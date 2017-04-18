@@ -1,11 +1,5 @@
-extends /partials/html-layout
-include /mixins/layout.pug
+extends /partials/category-layout
 
-block body
-	+layout(menu, {"category": "Odontólogos", "service": null}, "Odontólogos")
-	#content-wrapper
-
-
-		include /partials/footer
-
-	include /partials/form
+block variables
+	include _variables
+block content

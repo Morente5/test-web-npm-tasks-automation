@@ -1,9 +1,9 @@
 const  buildify = require('buildify'),
 	filesJS = [
-		'./src/js/script.js'
+		'./dev/js/script.js'
 	],
 	filesCSS = [
-		'./dist/css/styles.css'
+		'./dev/css/styles.css'
 	];
 
 	buildify()

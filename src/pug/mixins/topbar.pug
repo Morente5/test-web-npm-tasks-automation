@@ -11,16 +11,16 @@ mixin topbar()
             img(src='/img/braun_marketing_logo2.png', alt='Braun Marketing & Consulting')
       .nav-right.social-group
         .field.is-horizontal.nav-item.nav-form
-          a.nav-item.social
+          a(href='https://www.facebook.com/Braun-Marketing-Consulting-1461669590532398/').nav-item.social
             span.icon
               i.fa.fa-facebook
-          a.nav-item.social
+          a(href='https://twitter.com/BraunConsulting').nav-item.social
             span.icon
               i.fa.fa-twitter
-          a.nav-item.social.phone
+          a(href='tel:+34 999 88 87 77').nav-item.social.phone
             span.icon
               i.fa.fa-phone
-            span 999 888 777
+            span 999 88 87 77
           .field-body
 
             .field.url.is-hidden-mobile
@@ -28,4 +28,4 @@ mixin topbar()
                 input.input.from-url(type='url', placeholder='Introduce tu URL')
             .field.toggle-on-form
               p.control
-                a.button.is-info Te auditamos GRATIS
+                a.button.is-success Te auditamos GRATIS

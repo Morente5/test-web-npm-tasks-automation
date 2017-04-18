@@ -1,0 +1,27 @@
+extends /partials/html-layout
+include /mixins/testimonios
+include /mixins/auditoria
+include /mixins/prensa
+include /mixins/servicios
+include /mixins/mobile-menu
+include /mixins/header
+include /mixins/nosotros
+
+
+block body
+	block variables
+	+mobile-menu()
+	+header(active.category, 'header-'+active.category.replace(/\s+/g, '-').toLowerCase())
+	#content-wrapper
+
+		+servicios("Servicios para "+active.category)
+
+		block content
+		+prensa()
+		+auditoria()
+		+testimonios()
+
+		+nosotros()
+		include /partials/footer
+
+	include /partials/form

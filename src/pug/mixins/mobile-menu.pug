@@ -1,7 +1,11 @@
-mixin mobile-menu(menu, active)
+mixin mobile-menu()
 	aside.menu.is-medium.is-hidden.is-hidden-tablet.animated.slideOutLeft
 		ul.menu-list
 			if active.category
+				li
+					a(href="/") Volver a inicio
+						span.icon.is-pulled-left
+							i.fa.fa-caret-left
 				li
 					a.is-active= active.category
 					ul.animated
@@ -12,8 +16,8 @@ mixin mobile-menu(menu, active)
 				each category, cat_name in menu.categories
 					li
 						a(href="/"+category.slug)= cat_name
-							span.icon.is-pulled-right
-								i.dropdown-icon.fa.fa-caret-down
+							span.icon.dropdown-icon.is-pulled-right
+								i.fa.fa-caret-down
 						ul.animated(style='display:none;')
 							each service, ser_name in category.services
 								li
