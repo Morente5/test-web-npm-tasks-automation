@@ -1,21 +1,18 @@
 extends /partials/html-layout
-include /mixins/testimonios
-include /mixins/auditoria
-include /mixins/prensa
-include /mixins/categorias
-include /mixins/mobile-menu
-include /mixins/header
-include /mixins/nosotros
 
-block body
+include /mixins/categorias
+include /mixins/header
+
+block variables
 	include _variables
-	+mobile-menu()
-	+header("Consultora estratégica de negocio y Agencia de Marketing online especializada en el Sector Sanitario", 'header-inicio')
+block body
+	include /partials/components/mobile-menu
+	+header("Consultores de negocio y Agencia de Marketing online especializada en el Sector Sanitario", 'header-inicio')
 	#content-wrapper
 		section.hero.is-light
 			.hero-body
 				.container
-					h2.title ¿Debo invertir en una consultora estratégica y agencia de marketing online especializada en el sector sanitario?
+					h2.title ¿Por qué debo invertir en una consultora estratégica y agencia de marketing online especializada en el sector sanitario?
 					.tile.is-ancestor
 						.tile.is-parent.is-vertical
 							.tile.card
@@ -42,19 +39,21 @@ block body
 		)
 
 		block content
-		+prensa()
-		+auditoria()
-		section.hero#text-left-img-right
+
+		include /partials/components/auditoria
+		include /partials/components/prensa
+		section.hero#text-left-img-right.is-primary
 			.hero-body
 				.columns.is-gapless
 					.column
 						.container-left
 							h2.title La transparencia y la consistencia constituyen dos valores que guiarán nuestros procesos de Consultoría y Marketing Online
 					.column
-						img(src="/img/glass-ball.jpg")
-		+testimonios()
+						img(src="/img/transparencia.jpg")
+		include /partials/components/testimonios
 
-		+nosotros()
-		include /partials/footer
+		include /partials/components/nosotros
+		include /partials/components/footer
 
-	include /partials/form
+	include /partials/components/form
+	include /partials/components/jobform

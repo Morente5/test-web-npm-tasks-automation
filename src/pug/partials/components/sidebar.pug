@@ -1,0 +1,40 @@
+section.hero.is-light.sticky-parent
+    .hero-body
+        .container
+            .columns
+                .column
+                    article.page
+                        .content
+                            block content
+                .column.is-4
+                    aside.sidebar.sticky-item
+                        .card: .card-content
+                            p.has-text-centered.subtitle: strong ¿Nos llamas?
+                            p.has-text-centered: a(href='tel:+34 '+phone).nav-item.social.phone.button.is-link.is-social
+                                span.icon
+                                    i.fa.fa-phone
+                                span= phone
+                            p.has-text-centered.subtitle: strong ¿Te llamamos nosotros?
+                            form(name="llamamos", action="/mail/callmail.php", method="post")
+                                .field
+                                    p.control
+                                        input.input(type='text', name='nombre', placeholder='Nombre', required)
+                                .field
+                                    p.control.has-icon.has-icon-right
+                                        input.input(type='email', name='email', placeholder='Correo Electrónico', value='', required)
+                                        span.icon.is-small
+                                            i.fa.fa-envelope
+                                .field
+                                    p.control.has-icon.has-icon-right
+                                        input.input(type='phone', name='telefono', placeholder='Teléfono', value='', required)
+                                        span.icon.is-small
+                                            i.fa.fa-phone
+                                button.button.is-success Enviar
+                            .hero.hero-body.send-ok.is-hidden.animated.fadeIn
+                                .title.is-4.has-text-centered: strong Su petición se está tramitando.
+                                .title.is-4.has-text-centered: strong Nos pondremos en contacto con usted a la mayor brevedad posible.
+                            .hero.hero-body.send-fail.is-hidden.animated.fadeIn
+                                .title.is-4.has-text-centered: strong Se ha producido un error inesperado.
+                        if (video)
+                            .video
+                                iframe(src=video, allowfullscreen=true)

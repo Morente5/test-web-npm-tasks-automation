@@ -1,0 +1,16 @@
+div.services-wrapper
+    section.hero.is-primary
+        span.title-wrapper
+            .hero-body.hero-title
+                .container
+                    if (active.service)
+                        h2.title.is-spaced= "Más servicios para "+active.category
+                    else
+                        h2.title.is-spaced= "Servicios para "+active.category
+        span.nav-wrapper
+            .hero-body#nav-services.is-sticky
+                .container
+                    .tabs.is-boxed.is-medium
+                        ul.has-text-centered
+                            each service, ser_name in menu.categories[active.category].services
+                                li(class=(ser_name == active.service) ? 'is-active' : ''): a(href="/"+menu.categories[active.category].slug+"/"+service.slug)= ser_name

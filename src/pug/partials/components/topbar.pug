@@ -1,0 +1,36 @@
+.hero-head
+  nav.nav
+    .nav-left
+      span.nav-toggle#menu-toggle
+        span
+        span
+        span
+      .nav-logo
+        a.nav-item.is-brand(href="/")
+          img(src='/img/braun_marketing_logo2.png', alt='Braun Marketing & Consulting')
+    .nav-right.social-group
+      .field.is-horizontal.nav-item.nav-form.level
+        a(href=facebook).nav-item.social
+          span.icon
+            i.fa.fa-facebook
+        a(href=twitter).nav-item.social
+          span.icon
+            i.fa.fa-twitter
+        a(href=googleplus).nav-item.social
+          span.icon
+            i.fa.fa-google-plus
+        a(href=linkedin).nav-item.social
+          span.icon
+            i.fa.fa-linkedin
+        a(href='tel:+34 '+phone).nav-item.social.phone.button.is-link.is-social
+          span.icon
+            i.fa.fa-phone
+          span= phone
+        .field-body
+
+          .field.url.is-hidden-mobile
+            p.control.is-expanded
+              input.input.from-url(type='URL', placeholder='Introduce tu URL')
+          .field.toggle-on-form
+            p.control
+              a.button.is-success Te auditamos <span class="is-hidden-mobile">GRATIS</span>

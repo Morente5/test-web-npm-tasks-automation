@@ -1,8 +1,7 @@
 include /mixins/header-text
-include /mixins/topbar
 
 mixin header(text, containerId)
     header.hero.is-fullheight.is-primary.abs-container(id=containerId)
         div.absolute-full
-        +topbar
+        include /partials/components/topbar
         +header-text(text)

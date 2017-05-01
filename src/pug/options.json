@@ -1,12 +1,15 @@
 {
     "lang": "es",
-    "title": "Braun Marketing & Consulting",
-    "description": "Descripción",
     "basedir": "D:\\braunM&C\\src\\pug",
-    "mobileColor": "#000000",
     "favicon": "/img/favicon.ico",
     "logoPNG": "/img/logo.png",
     "logoSVG": "/img/logo.svg",
+    "phone": "666 52 36 68",
+    "mail": "contacto@braunmarketingandconsulting.es",
+    "twitter": "https://twitter.com/BraunConsulting",
+    "facebook": "https://www.facebook.com/Braun-Marketing-Consulting-1461669590532398/",
+    "googleplus": "https://plus.google.com/116393356217353893031",
+    "linkedin": "https://www.linkedin.com/company-beta/11083660/",
     "menu": {
         "categories": {
             "Médicos": {
@@ -52,7 +55,7 @@
                     "Desarrollo Web": {
                         "slug": "desarrollo-web"
                     },
-                    "Análisis web": {
+                    "Análisis Web": {
                         "slug": "analisis-web"
                     },
                     "Social Marketing": {

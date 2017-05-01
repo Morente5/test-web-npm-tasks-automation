@@ -1,0 +1,46 @@
+footer.footer.hero.is-primary.abs-container
+	div.absolute-full
+	.container
+		.columns
+			.column.is-2
+				h3.subtitle Braun Marketing & Consulting
+				each category, cat_name in menu.categories
+					p: a(href="/"+category.slug)= cat_name
+			.column.is-3
+				h3.subtitle Contacto
+				p
+					a(href="mailto:" + mail)
+						span.icon
+							i.fa.fa-envelope
+						// span contacto<wbr>@braunmarketingandconsulting.es
+					a(href="tel:+34 " + phone).button.is-link.is-social
+						span.icon
+							i.fa.fa-phone
+						span= phone
+				//- h3.subtitle Redes sociales
+				//- p
+				//- 	a(href=facebook)
+				//- 		span.icon
+				//- 			i.fa.fa-facebook
+				//- 	a(href=twitter)
+				//- 		span.icon
+				//- 			i.fa.fa-twitter
+				//- 	a(href=googleplus)
+				//- 		span.icon
+				//- 			i.fa.fa-google-plus
+				//- 	a(href=linkedin)
+				//- 		span.icon
+				//- 			i.fa.fa-linkedin
+			.column.is-4.abs-container
+				h3.subtitle Dónde estamos
+				#map
+				span.line Calle Hoteles Belén Calle A, 12 <wbr>18009 Granada
+			.column.is-3
+				h3.subtitle Sobre nosotros
+				p: a Política de privacidad y cookies
+				p.field.toggle-on-jobform
+					button.button.is-info Trabaja con nosotros
+
+				h3.subtitle Auditoría GRATIS
+				p.field.toggle-on-form
+					button.button.is-success Pedir auditoría

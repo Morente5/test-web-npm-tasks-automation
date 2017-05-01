@@ -1,0 +1,48 @@
+.modal#modal-form
+	.modal-background.animated.fadeIn
+	form.modal-card(name="auditoria", action="/mail/mail.php", method="post")
+		header.modal-card-head
+			p.modal-card-title Auditoría GRATIS
+			button.delete.toggle-off-form(type="button")
+		section.modal-card-body
+			.field
+				label.label(for='url') URL 
+					span.validation.is-danger
+				p.control
+					input.input.dest-url(type='URL', name='url', placeholder='URL', required)
+			.field
+				label.label(for='nombre') Nombre 
+					span.validation.is-danger
+				p.control
+					input.input(type='text', name='nombre', placeholder='Nombre', pattern="^[a-zA-Z ]*$", required)
+			.field
+				label.label(for='empresa') Empresa 
+					span.validation.is-danger
+				p.control
+					input.input(type='text', name='empresa', placeholder='Empresa', required)
+			.field
+				label.label(for='email') Correo Electrónico 
+					span.validation.is-danger
+				p.control.has-icon.has-icon-right
+					input.input(type='email', name='email', placeholder='Correo Electrónico', required)
+					span.icon.is-small
+						i.fa.fa-envelope
+			.field
+				label.label(for='telefono') Teléfono 
+					span.validation.is-danger
+				p.control.has-icon.has-icon-right
+					input.input(type='tel', name='telefono', placeholder='Teléfono', required)
+					span.icon.is-small
+						i.fa.fa-phone
+			.field
+				label.label(for='sugerencia') Sugerencias (opcional)
+				p.control
+					textarea.textarea(name='sugerencia', placeholder='Escribe una sugerencia...')
+			.hero.hero-body.send-ok.is-hidden.animated.fadeIn
+				.title.is-2.has-text-centered: strong Su petición se está tramitando.
+				.title.is-2.has-text-centered: strong Nos pondremos en contacto con usted a la mayor brevedad posible.
+			.hero.hero-body.send-fail.is-hidden.animated.fadeIn
+				.title.is-2.has-text-centered: strong Se ha producido un error inesperado.
+		footer.modal-card-foot
+			button.button.is-success Enviar
+			button.button.toggle-off-form(type="button") Cancelar

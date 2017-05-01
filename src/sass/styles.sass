@@ -1,6 +1,7 @@
 @import 'vars'
-@import 'bulma/bulma'
+@import 'bulma/bulma.sass'
 @import 'font-awesome/scss/font-awesome'
+@import 'balloon-css/src/balloon'
 @import 'animate.css/animate'
 
 header.hero
@@ -8,7 +9,7 @@ header.hero
 	background-repeat: no-repeat
 	background-size: cover
 	.hero-body
-		//min-padding: 3rem 1.5rem;
+		//min-padding: 3rem 1.5rem
 		&.container
 			//padding: 0
 		.columns
@@ -34,15 +35,26 @@ body
 
 .services-wrapper
 	background-color: $primary
-
-.is-white
-	color: #fff
+	section.hero
+		padding-bottom: 1.5rem
+		.title-wrapper
+			.hero-body
+				padding-top: 1.5rem
+				padding-bottom: 1.5rem
 
 .is-rounded
 	border-radius: 50%
 
 .columns.align-bottom
 	align-items: flex-end
+
+aside.sidebar
+	padding-left: 0
+	padding-right: 0
+	p.subtitle
+		margin-bottom: 16
+		&:not(:first-child)
+			margin-top: 16
 
 aside.menu
 	position: absolute
@@ -59,6 +71,39 @@ aside.menu
 		.icon
 			height: 2.25rem
 
+.breadcrumbs
+	ol, ol li
+		display: inline!important
+	.hero-body
+		padding: 1rem 1.5rem
+		border-bottom: solid rgba(255,255,255, .4) 1px
+		.icon.is-small
+			width: 1.5rem
+			height: 1.5rem
+	li:not(:last-child):after
+		content: ''
+		//content: ''
+		font-family: FontAwesome
+		padding-left: 10px
+		padding-right: 5px
+
+.video
+	position: relative
+	padding-bottom: 56.25% //* 16/9 ratio */
+	padding-top: 30px //* IE6 workaround*/
+	margin-top: 24
+	height: 0
+	overflow: hidden
+
+	iframe,
+	object,
+	embed
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
 .is-not-scrollable
 	overflow: hidden!important
 
@@ -72,32 +117,14 @@ aside.menu
 
 .is-sticky
 	z-index: 100
-	//width: 100%
-
-.is-service-sticky
-	z-index: 101
 	background-color: $primary
-
-.is-service-sticky.is-fixed
-	.title-wrapper
-		animation: glow .5s infinite alternate
-		&:hover
-			animation: none
-
-@keyframes glow
-	to
-		text-shadow: 0 0 10px white
+	//width: 100%
 
 .is-fixed
 	position: fixed
 	top: 0
 	left: 0
 	right: 0
-	#nav-services
-		width: 100%
-		position: absolute
-		background-color: $primary
-
 
 .nav-item
 	a
@@ -145,10 +172,10 @@ nav .field.url
 			display: block
 
 #nav-services
-	padding: 0 0 48 0
+	padding: 0 0 0 0
 	.tabs
 		display: inline-block
-		white-space: initial;
+		white-space: initial
 
 		ul
 			display: inline-block
@@ -169,11 +196,39 @@ nav .field.url
 	border: 0
 	border-radius: 0
 
-.media-content
-	p.quote:before
-		content: "«"
-	p.quote:after
-		content: "»"
+article.media
+	figure
+		margin-top: auto
+		margin-bottom: auto
+
+.justify-right
+	text-align: right
+
+blockquote.card
+	.image
+		margin-left: auto
+		img
+			border-radius: 50%
+	.column.name
+		margin: auto
+	.card-footer, .card-header
+		.card-content
+			width: 100%
+	& > .card-content
+		padding-top: 3rem
+
+.quote
+	position: relative
+	&:before
+		position: absolute
+		top: -1px
+		left: 20px
+		width: 82px
+		height: 31px
+		background: url(/img/quote.svg) 0 0 no-repeat
+		content: ' '
+		display: block
+		z-index: 91
 
 .modal-background
 
@@ -189,8 +244,11 @@ nav .field.url
 input.from-url
 	width: 50%
 
-.tabs.is-boxed a:hover
-	border-bottom-color: transparent
+.tabs.is-boxed a
+	border-radius: 0
+	&:hover
+		border-bottom-color: transparent
+
 
 @media screen and (max-width: 980px)
 	#nav-categories
@@ -207,7 +265,7 @@ input.from-url
 			width: 96px!important
 			margin: 16px!important
 	#nav-services
-		padding: 0 0 48 0
+		padding: 0 0 0 0
 		.tabs
 			width: 100%
 			ul
@@ -242,9 +300,11 @@ input.from-url
 		opacity: .6
 
 footer.footer
+	@media screen and (max-width: 768px)
+		text-align: center
 	background-image: url('/img/edseSku.jpg')
-	a
-		line-height: 2rem
+	p
+		margin-bottom: 12px
 	h3:not(:first-child)
 		margin-top: 2rem
 	.icon
@@ -262,100 +322,113 @@ header.hero.abs-container
 		opacity: .6
 	&#header
 		&-inicio
-			background-image: url('/img/oficina-moderna.jpg')
+			background-image: url('/img/inicio.jpg')
 		&-médicos
-			background-image: url('/img/oficina-moderna.jpg')
+			background-image: url('/img/medicos.jpg')
 			&-posicionamiento-natural
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/medicos.jpg')
 			&-sem
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/medicos.jpg')
 			&-healthcare-benchmarking
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/medicos.jpg')
 			&-diseño-web
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/medicos.jpg')
 			&-analítica-web
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/medicos.jpg')
 			&-social-media-marketing
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/medicos.jpg')
 			&-reputación-online-médica
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/medicos.jpg')
 			&-consultoría
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/medicos.jpg')
 		&-fisioterapeutas
-			background-image: url('/img/oficina-moderna.jpg')
+			background-image: url('/img/fisioterapeutas.jpg')
 			&-posicionamiento-seo
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/fisioterapeutas.jpg')
 			&-search-engine-marketing
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/fisioterapeutas.jpg')
 			&-benchmarking
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/fisioterapeutas.jpg')
 			&-desarrollo-web
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/fisioterapeutas.jpg')
 			&-análisis-web
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/fisioterapeutas.jpg')
 			&-social-marketing
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/fisioterapeutas.jpg')
 			&-gestión-de-reputación-online
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/fisioterapeutas.jpg')
 			&-consultoría-estratégica
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/fisioterapeutas.jpg')
 		&-odontólogos
-			background-image: url('/img/oficina-moderna.jpg')
+			background-image: url('/img/odontologos.jpg')
 			&-posicionamiento-web
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/odontologos.jpg')
 			&-google-adwords
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/odontologos.jpg')
 			&-benchmarking-odontológico
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/odontologos.jpg')
 			&-diseño-página-web
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/odontologos.jpg')
 			&-analytics-google
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/odontologos.jpg')
 			&-community-manager
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/odontologos.jpg')
 			&-gestión-marca-online
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/odontologos.jpg')
 			&-consultoría-empresarial
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/odontologos.jpg')
 		&-farmacéuticos
-			background-image: url('/img/oficina-moderna.jpg')
+			background-image: url('/img/farmaceuticos.jpg')
 			&-posicionamiento-en-buscadores
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/farmaceuticos.jpg')
 			&-google-ads
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/farmaceuticos.jpg')
 			&-benchmarking-farmacéutico
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/farmaceuticos.jpg')
 			&-crear-página-web
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/farmaceuticos.jpg')
 			&-google-analytics
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/farmaceuticos.jpg')
 			&-redes-sociales
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/farmaceuticos.jpg')
 			&-reputación-online
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/farmaceuticos.jpg')
 			&-consultoría-de-negocio
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/farmaceuticos.jpg')
 		&-veterinarios
-			background-image: url('/img/oficina-moderna.jpg')
+			background-image: url('/img/veterinarios.jpg')
 			&-seo-local
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/veterinarios.jpg')
 			&-ppc
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/veterinarios.jpg')
 			&-benchmarking-veterinario
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/veterinarios.jpg')
 			&-maquetación-web
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/veterinarios.jpg')
 			&-analytics-web
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/veterinarios.jpg')
 			&-social-media-plan
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/veterinarios.jpg')
 			&-orm
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/veterinarios.jpg')
 			&-asesoramiento-empresarial
-				background-image: url('/img/oficina-moderna.jpg')
+				background-image: url('/img/veterinarios.jpg')
 
+.button
+	white-space: pre
 
-#modal-form
+.button.is-link.is-social
+	text-decoration: none
+	text-align: left
+	line-height: 1.2rem
+	user-select: initial
+	&:hover, &:active, &:focus
+		color: inherit
+		background-color: inherit
+		border: 0.8 trasparent
+		box-shadow: none
+
+#modal-form, #modal-jobform
 	.modal-card-head, .modal-card-foot
 		background-color: $primary
 	.modal-card-title
@@ -363,26 +436,70 @@ header.hero.abs-container
 	.modal-background
 		background-color: rgba(#2e3748, 0.86)
 
+#text-left-img-right
+	.hero-body
+		padding: 0 0 0 0
+	h2
+		padding: 48
+
 @media screen and (min-width: 769px)
 	#text-left-img-right
 		position: relative
 		.column
 			margin: auto
-		img
-			margin-top: -48px
-			margin-bottom: -48px
-			margin-right: -24px
 
-.container-left
-	position: relative
+		h2
+			padding: 1.5rem 48 1.5rem 0
+
+	.container-left
+		margin: 0 0 0 1.5rem
+		position: relative
 @media screen and (min-width: 1000px)
+	#text-left-img-right
+		.hero-body
+			padding: initial
+		.column
+			margin: auto
+
+		h2
+			padding: 0 48 0 0
 	.container-left
 		margin: 0 0 0 auto
 		width: 480px
-
 @media screen and (min-width: 1192px)
 	.container-left
 		width: 576px
 @media screen and (min-width: 1384px)
 	.container-left
 		width: 672px
+
+
+.inputfile
+	width: 0.1px
+	height: 0.1px
+	opacity: 0
+	overflow: hidden
+	position: absolute
+	z-index: -1
+
+.inputfile + label
+	display: inline-block
+
+
+.inputfile + label
+	cursor: pointer
+
+#map
+	height: 250
+	width: 100%
+	@media screen and (max-width: 768px)
+		height: 400	
+
+.gm-style-cc, .gmnoprint
+    display: none
+
+span.validation
+	font-weight: 400
+	font-size: .8rem
+	&.is-danger
+		color: $danger

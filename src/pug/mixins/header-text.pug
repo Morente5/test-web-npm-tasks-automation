@@ -1,5 +1,10 @@
 mixin header-text(text)
   .hero-body.container
     .columns.is-gapless
-      .column.is-5
-        h1.title= text
+      if (active.service)
+        .column.is-9
+          h1.title.is-2: strong= active.service
+          p.title= text
+      else
+        .column.is-6
+          h1.title: strong= text

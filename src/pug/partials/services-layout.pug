@@ -1,27 +1,23 @@
 extends /partials/html-layout
-include /mixins/testimonios
-include /mixins/auditoria
-include /mixins/prensa
-include /mixins/servicios
-include /mixins/mobile-menu
 include /mixins/header
-include /mixins/nosotros
 
+block variables
 
 block body
-	block variables
-	+mobile-menu()
-	+header(active.service, 'header-'+active.category.replace(/\s+/g, '-').toLowerCase()+'-'+active.service.replace(/\s+/g, '-').toLowerCase())
+	include /partials/components/mobile-menu
+	+header(intro, 'header-'+active.category.replace(/\s+/g, '-').toLowerCase()+'-'+active.service.replace(/\s+/g, '-').toLowerCase())
 	#content-wrapper
+		include /partials/components/breadcrumbs
+		include /partials/components/servicios
 
-		+servicios("Más servicios para "+active.category)
+		include /partials/components/sidebar
 
-		block content
-		+auditoria()
-		+prensa()
-		+testimonios()
+		include /partials/components/auditoria
+		include /partials/components/prensa
+		include /partials/components/testimonios
 
-		+nosotros()
-		include /partials/footer
+		include /partials/components/nosotros
+		include /partials/components/footer
 
-	include /partials/form
+	include /partials/components/form
+	include /partials/components/jobform

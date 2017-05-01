@@ -1,0 +1,33 @@
+extends /partials/html-layout
+
+include /mixins/categorias
+include /mixins/header
+
+
+block variables
+block body
+	include /partials/components/mobile-menu
+	header.hero.is-fullheight.is-primary.abs-container(id='header-inicio')
+		div.absolute-full
+		include /partials/components/topbar
+		.hero-body.container
+			.columns.is-gapless
+				.column.is-6
+					h1.title.is-2: strong Página no encontrada
+					a(href="/")
+						span.icon.is-medium
+							i.fa.fa-caret-left
+						span.subtitle.is-3 Volver a inicio
+	#content-wrapper
+		+categorias(
+			"Nuestras acciones de Marketing online y consultoría harán que tus clientes te encuentren entre los primeros resultados",
+			"¿Crees que hoy en día con tus conocimientos y experiencia es suficiente?",
+			"Dinos qué profesional eres y te diremos cómo ayudarte"
+		)
+		include /partials/components/auditoria
+
+		include /partials/components/nosotros
+		include /partials/components/footer
+
+	include /partials/components/form
+	include /partials/components/jobform

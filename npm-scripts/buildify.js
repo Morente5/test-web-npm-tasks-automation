@@ -1,6 +1,11 @@
 const  buildify = require('buildify'),
 	filesJS = [
-		'./dev/js/script.js'
+		'./node_modules/jquery/dist/jquery.min.js',
+		'./node_modules/sticky-kit/dist/sticky-kit.js',
+		'./dev/js/forms.js',
+		'./dev/js/map.js',
+		'./dev/js/mobile-menu.js',
+		'./dev/js/sticky.js'
 	],
 	filesCSS = [
 		'./dev/css/styles.css'
@@ -9,7 +14,7 @@ const  buildify = require('buildify'),
 	buildify()
 		.concat( filesCSS )
 		.cssmin()
-		.save( './dist/css/styles.min.css' );
+		.save( './dist/css/styles.css' );
 
 	buildify()
 		.concat( filesJS )

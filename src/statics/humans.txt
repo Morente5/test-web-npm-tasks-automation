@@ -1,14 +1,14 @@
-/* El título de mi sitio - http://midominio.com */
+/* Braun Marketing & Consulting - https://braunmarketingandconsuling.es */
 
 /* TEAM */
-	Diseño y Programación Web: Jonathan MirCha
-	Contact: jonmircha [at] gmail.com
-	Twitter: @jonmircha
-	From: Mexico city, México
+	Diseño y Programación Web: Alejandro Morente Campos
+	Contact: alejandro@braunmarketingandconsuling.es
+	Twitter: @braunconsulting
+	From: 
 
 /* SITE */
-	Last update: 2017/03/15
+	Last update: 2017/04/25
 	Language: Español
 	Standars: HTML5, CSS3, JavaScript, PHP, MySQL
-	Components: Responsive Design, Node.js, NPM, WordPress
-	Software: Visual Studio Code, PowerShell, Chrome, Fireworks, Illustrator, Photoshop
+	Components: Responsive Design, Node.js, NPM
+	Software: Visual Studio Code, PowerShell, Chrome, Illustrator, Photoshop
