@@ -47,7 +47,7 @@ $(document).ready(() => {
 
     $('.inputfile').change( function(e) {
         let fileName
-        let $span = $(this).parent()().parent().find('span.validation')
+        let $span = $(this).parent().parent().find('span.validation')
         if (this.files && this.files.length > 1) {
             fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
         } else {
