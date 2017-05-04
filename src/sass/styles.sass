@@ -1,8 +1,19 @@
 @import 'vars'
 @import 'bulma/bulma.sass'
+@import 'bootstrap/scss/variables'
+$grid-breakpoints: (xs: 0, sm: 769px, md: 768px, lg: 992px, xl: 1200px)
+@import 'bootstrap/scss/mixins'
+@import 'bootstrap/scss/card'
+.card
+	border: none
+	border-radius: 0
+	margin-top: 1.5rem
+	margin-bottom: 1.5rem
 @import 'font-awesome/scss/font-awesome'
 @import 'balloon-css/src/balloon'
 @import 'animate.css/animate'
+
+
 
 header.hero
 	//background-image: url(../img/Master-en-gestion-de-clinicas.jpg)
@@ -17,9 +28,11 @@ header.hero
 
 html
 	overflow: auto!important
+	overflow-x: hidden!important
 
 body
 	overflow-x: hidden
+	width: 100vw
 
 .has-shadow
 	box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1)
@@ -32,6 +45,24 @@ body
 .content
 	ol[type="a"]
 		list-style-type: lower-alpha!important
+	ol[type="i"]
+		list-style-type: lower-roman!important
+	ul[type="tick"]
+		list-style: none
+		li
+			&:before
+				font-family: FontAwesome
+				content: "\f00c"
+				margin-left: -1.5em
+				margin-right: .5em
+
+	p, ol, ul, blockquote, table
+		margin-bottom: 1em
+
+
+.modal-card-description
+	color: #fff
+	padding-top: 0
 
 .services-wrapper
 	background-color: $primary
@@ -55,11 +86,13 @@ aside.sidebar
 		margin-bottom: 16
 		&:not(:first-child)
 			margin-top: 16
+	.card
+		margin: 0
 
 aside.menu
 	position: absolute
 	background-color: white
-	width: 100%
+	width: 100vw
 	z-index: 200
 	top: 52px
 	min-height: calc(100vh - 52px)
@@ -72,6 +105,8 @@ aside.menu
 			height: 2.25rem
 
 .breadcrumbs
+	ol
+		padding-left: 10px
 	ol, ol li
 		display: inline!important
 	.hero-body
@@ -85,7 +120,7 @@ aside.menu
 		//content: ''
 		font-family: FontAwesome
 		padding-left: 10px
-		padding-right: 5px
+		padding-right: 10px
 
 .video
 	position: relative
@@ -122,6 +157,7 @@ aside.menu
 
 .is-fixed
 	position: fixed
+	width: 100vw
 	top: 0
 	left: 0
 	right: 0
@@ -185,9 +221,13 @@ nav .field.url
 .nav-wrapper
 	//height: 52px
 .news
-	.card-header-title
-		img
-			margin: auto
+	.card-header, .card-footer
+		padding: 0
+		box-shadow: none
+		border-radius: 0
+		.card-header-title
+			img
+				margin: auto
 
 .menu.is-sticky.is-fixed
 	//background-color: darkgrey
@@ -205,6 +245,10 @@ article.media
 	text-align: right
 
 blockquote.card
+	p
+		color: #000!important
+		strong
+			color: #000!important
 	.image
 		margin-left: auto
 		img
@@ -212,9 +256,9 @@ blockquote.card
 	.column.name
 		margin: auto
 	.card-footer, .card-header
-		.card-content
+		.content
 			width: 100%
-	& > .card-content
+	& > .card-block
 		padding-top: 3rem
 
 .quote
@@ -230,8 +274,6 @@ blockquote.card
 		display: block
 		z-index: 91
 
-.modal-background
-
 .column.is-vertically-centered
 	margin: auto
 
@@ -239,7 +281,7 @@ blockquote.card
 	width: 8px!important
 	height: 8px!important
 	&-thumb
-		background-color: $primary
+		background-color: #7396b2
 
 input.from-url
 	width: 50%
@@ -310,11 +352,22 @@ footer.footer
 	.icon
 		margin: 6
 
+#home-hero
+	.card
+		.card-content
+			margin: auto
+			text-align: center
+
 #auditoria
 	background-image: url('/img/auditoria.jpg')
 
+#testimonios
+	background-image: url("/img/testimonios.jpg")
+	background-position: center
+
 header.hero.abs-container
 	background-size: cover
+	background-position: center
 	nav
 		background-color: $primary
 

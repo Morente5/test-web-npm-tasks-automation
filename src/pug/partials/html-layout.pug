@@ -22,6 +22,66 @@ html(lang='es')
     link(rel='sitemap', type='application/xml', title='Sitemap', href='/sitemap.xml')
     link(rel='stylesheet', href='/css/styles.css')
   body(cz-shortcut-listen='true')
+    script(type="application/ld+json").
+      {  
+        "@context": "http://schema.org",
+        "@type":"WebSite",
+        "@id":"#website",
+        "url": "https://braunmarketingandconsulting.es/",
+        "name": "Braun Marketing & Consulting",
+        "alternateName": "Braun Marketing Consulting SL"
+      }
+    script(type="application/ld+json").
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "https://braunmarketingandconsulting.es/",
+        "logo": "https://braunmarketingandconsulting.es/img/logo.png",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "@id": "#CustomerService",
+            "contactType": "Customer Service",
+            "telephone": "+34 #{phone}",
+            "email": "contacto@braunmarketingandconsulting.es"
+          }
+        ],
+        "description": "Agencia de Marketing Online y Consultoría especializada en el sector sanitario. SEO, SEM, redes sociales, blog, diseño web, estudio de Mercado, estrategia online y pubilicidad son nuestros servicios. Si necesitas una Agencia de Marketing online de confianza nosotros somos lo que buscas",
+        "sameAs": [
+          "#{facebook}",
+          "#{twitter}",
+          "#{googleplus}",
+          "#{youtube}",
+          "#{linkedin}"
+        ]
+      }
+    if (active.category)
+      script(type="application/ld+json")
+        |  {
+        |    "@context": "http://schema.org",
+        |    "@type": "BreadcrumbList",
+        |    "itemListElement": [
+        |      {
+        |        "@type": "ListItem",
+        |        "position": 1,
+        |        "item": {
+        |          "@id": "https://braunmarketingandconsulting.es/#{menu.categories[active.category].slug}",
+        |          "name": "#{active.category}"
+        |        }
+        |      }
+        if (active.service)
+          |      ,
+          |      {
+          |        "@type": "ListItem",
+          |        "position": 2,
+          |        "item": {
+          |          "@id": "https://braunmarketingandconsulting.es/#{menu.categories[active.category].slug}/#{menu.categories[active.category].services[active.service].slug}",
+          |          "name": "#{active.service}"
+          |        }
+          |      }
+        |    ]
+        |  }
+
     block body
     script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

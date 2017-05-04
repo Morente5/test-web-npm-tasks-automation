@@ -183,7 +183,9 @@ $('form[name=auditoria]').submit(function(event) {
             telefono: $form.find("input[name='telefono']").val(),
             sugerencia: $form.find("textarea[name='sugerencia']").val(),
         }
-    console.log(form)
+
+    $form.find('button.is-success').addClass('is-loading')
+    $form.find('button.is-success').prop('disabled', true)
 
 
     $.ajax({
@@ -196,6 +198,8 @@ $('form[name=auditoria]').submit(function(event) {
             $form.find('.modal-card-body .send-ok').removeClass('is-hidden');
             // ga.send
             setTimeout(function () {
+                $form.find('button.is-success').removeClass('is-loading')
+                $form.find('button.is-success').prop('disabled', false)
                 toggleOffForm($('#modal-form'))
             }, 3000);
             
@@ -206,6 +210,8 @@ $('form[name=auditoria]').submit(function(event) {
             $form.find('.modal-card-body .send-fail').removeClass('is-hidden');
             // ga.send
             setTimeout(function () {
+                $form.find('button.is-success').removeClass('is-loading')
+                $form.find('button.is-success').prop('disabled', false)
                 $form.find('.field, button.is-success').removeClass('is-hidden');
                 $form.find('.modal-card-body .send-fail').addClass('is-hidden');
             }, 3000);
@@ -225,8 +231,9 @@ $('form[name=trabaja]').submit(function (event) {
     form.append('telefono', $form.find("input[name='telefono']").val());
     form.append('motivos', $form.find("textarea[name='motivos']").val());
     form.append('file', $form.find("input[name='file']")[0].files[0]);
-    console.log(form)
 
+    $form.find('button.is-success').addClass('is-loading')
+    $form.find('button.is-success').prop('disabled', true)
 
     $.ajax({
         type: 'POST',
@@ -237,11 +244,12 @@ $('form[name=trabaja]').submit(function (event) {
         processData: false,
 
         success: function (data, textStatus, request) {
-            console.log(data);
             $form.find('.field, button.is-success').addClass('is-hidden');
             $form.find('.modal-card-body .send-ok').removeClass('is-hidden');
             // ga.send
             setTimeout(function () {
+                $form.find('button.is-success').removeClass('is-loading')
+                $form.find('button.is-success').prop('disabled', false)
                 toggleOffForm($('#modal-jobform'))
             }, 3000);
 
@@ -252,6 +260,8 @@ $('form[name=trabaja]').submit(function (event) {
             $form.find('.modal-card-body .send-fail').removeClass('is-hidden');
             // ga.send
             setTimeout(function () {
+                $form.find('button.is-success').removeClass('is-loading')
+                $form.find('button.is-success').prop('disabled', false)
                 $form.find('.field, button.is-success').removeClass('is-hidden');
                 $form.find('.modal-card-body .send-fail').addClass('is-hidden');
             }, 3000);
@@ -265,15 +275,15 @@ $('form[name=llamamos]').submit(function (event) {
     let $form = $(this);
     let url = $form.attr("action");
     let breadcrumbs = $('.menu-list').find('.is-active').map((i, elem) => elem.text)
-    console.log(breadcrumbs);
     let form = new FormData();
     form.append('nombre', $form.find("input[name='nombre']").val());
     form.append('email', $form.find("input[name='email']").val());
     form.append('telefono', $form.find("input[name='telefono']").val());
     form.append('categoria', breadcrumbs[0]);
     form.append('servicio', breadcrumbs[1]);
-    console.log(form)
 
+    $form.find('button.is-success').addClass('is-loading')
+    $form.find('button.is-success').prop('disabled', true)
 
     $.ajax({
         type: 'POST',
@@ -284,11 +294,12 @@ $('form[name=llamamos]').submit(function (event) {
         processData: false,
 
         success: function (data, textStatus, request) {
-            console.log(data);
             $form.parent().children(':not(.hero.send-ok)').addClass('is-hidden');
             $form.parent().children('.hero.send-ok').removeClass('is-hidden');
             // ga.send
             setTimeout(function () {
+                $form.find('button.is-success').removeClass('is-loading')
+                $form.find('button.is-success').prop('disabled', false)
                 $form.parent().children(':not(.hero)').removeClass('is-hidden');
                 $form.parent().children('.hero').addClass('is-hidden');
             }, 3000);
@@ -300,6 +311,8 @@ $('form[name=llamamos]').submit(function (event) {
             $form.parent().children('.hero.send-fail').removeClass('is-hidden');
             // ga.send
             setTimeout(function () {
+                $form.find('button.is-success').removeClass('is-loading')
+                $form.find('button.is-success').prop('disabled', false)
                 $form.parent().children(':not(.hero)').removeClass('is-hidden');
                 $form.parent().children('.hero').addClass('is-hidden');
             }, 3000);

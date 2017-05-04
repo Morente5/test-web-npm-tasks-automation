@@ -79,6 +79,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "balloon-css": "^0.4.0",
+    "bootstrap": "^4.0.0-alpha.6",
     "bulma": "^0.4.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
