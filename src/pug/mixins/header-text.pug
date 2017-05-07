@@ -4,7 +4,7 @@ mixin header-text(text)
       if (active.service)
         .column.is-8
           h1.title.is-spaced.is-2: strong= active.service
-          p.subtitle.is-4= text
+          p.subtitle.is-4 !{text}
       else
         .column.is-8
-          h1.title.is-2: strong= text
+          h1.title.is-2: strong !{text}

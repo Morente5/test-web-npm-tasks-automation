@@ -1,4 +1,4 @@
 User-Agent: *
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Sitemap: /sitemap.xml
+Disallow: /css/
+Disallow: /fonts/
+Sitemap: https://braunmarketingandconsulting.es/sitemap.xml

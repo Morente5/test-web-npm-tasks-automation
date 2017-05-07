@@ -2,7 +2,7 @@ html(lang='es')
   block variables
   head
     meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(name='viewport', content='width=device-width,initial-scale=.9')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     title= title
     meta(name='description', content=description)
@@ -21,7 +21,18 @@ html(lang='es')
     link(rel='author', type='text/plain', href='/humans.txt')
     link(rel='sitemap', type='application/xml', title='Sitemap', href='/sitemap.xml')
     link(rel='stylesheet', href='/css/styles.css')
+    // Google Tag Manager 
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5VGFCX4');
+    // End Google Tag Manager 
   body(cz-shortcut-listen='true')
+    // Google Tag Manager (noscript) 
+    noscript: iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-5VGFCX4', height='0', width='0', style='display:none;visibility:hidden')
+    // End Google Tag Manager (noscript) 
     script(type="application/ld+json").
       {  
         "@context": "http://schema.org",
@@ -83,13 +94,6 @@ html(lang='es')
         |  }
 
     block body
-    script.
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', '', 'auto');
-      ga('send', 'pageview');
     script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAtxc2up_ZAi8C95WWzzc8RE72wB5tnF9w', async, defer)
     // build:js /js/script.js 
     script(src='https://code.jquery.com/jquery-3.2.1.min.js')
@@ -99,4 +103,5 @@ html(lang='es')
     script(src='/js/map.js')
     script(src='/js/mobile-menu.js')
     script(src='/js/sticky.js')
+    script(src='/js/faq.js')
     // endbuild 

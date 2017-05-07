@@ -1,0 +1,15 @@
+section.hero.is-primary
+    .hero-body
+        .container
+            h2.title Preguntas más frecuentes
+            for preg in faq
+                .faq.has-shadow
+                    .level.is-mobile
+                        a.button.is-large.is-primary.is-inverted.is-rounded
+                            span.icon
+                                i.fa.fa-question
+                        h3.question.subtitle !{preg.pregunta}
+                        a.button.is-large.is-link.is-social.toggle-faq
+                            span.icon
+                                i.fa.fa-caret-down
+                    .content.answer !{preg.respuesta}

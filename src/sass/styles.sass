@@ -60,6 +60,10 @@ body
 		margin-bottom: 1em
 
 
+.card-deck
+	margin-top: -1.5rem
+	margin-bottom: -1.5rem
+
 .modal-card-description
 	color: #fff
 	padding-top: 0
@@ -168,6 +172,9 @@ aside.menu
 	img
 		max-width: auto!important
 
+.nav-form.nav-item
+	justify-content: flex-end
+
 .card-header-title
 	max-height: 60px
 	img
@@ -244,6 +251,28 @@ article.media
 .justify-right
 	text-align: right
 
+.faq
+	cursor: pointer
+	background-color: #7396b2
+	min-height: 74px
+	&:not(:last-child)
+		margin-bottom: 1.5rem
+	.level
+		margin: 0
+	h3.question
+		display: inline-block
+		margin-top: .75rem!important
+		margin-bottom: .75rem!important
+		width: calc(100% - 154px)
+		//margin-top: 14.6
+		padding: 0 10
+	a.button
+		margin: 10
+	.answer
+		padding: 2rem
+		display: none
+		color: inherit
+
 blockquote.card
 	p
 		color: #000!important
@@ -258,8 +287,13 @@ blockquote.card
 	.card-footer, .card-header
 		.content
 			width: 100%
+		p:last-child
+			margin: 0
 	& > .card-block
 		padding-top: 3rem
+
+.stars
+	color: #ffdb02
 
 .quote
 	position: relative
@@ -344,7 +378,7 @@ input.from-url
 footer.footer
 	@media screen and (max-width: 768px)
 		text-align: center
-	background-image: url('/img/edseSku.jpg')
+	background-image: url('/img/footer.jpg')
 	p
 		margin-bottom: 12px
 	h3:not(:first-child)

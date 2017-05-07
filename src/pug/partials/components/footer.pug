@@ -5,15 +5,15 @@ footer.footer.hero.is-primary.abs-container
 			.column.is-2
 				h3.subtitle Braun Marketing & Consulting
 				each category, cat_name in menu.categories
-					p: a(href="/"+category.slug)= cat_name
+					p: a(href="/"+category.slug, rel="nofollow")= cat_name
 			.column.is-3
 				h3.subtitle Contacto
 				p
-					a(href="mailto:" + mail)
+					a(href="mailto:" + mail, rel="nofollow")
 						span.icon
 							i.fa.fa-envelope
 						// span contacto<wbr>@braunmarketingandconsulting.es
-					a(href="tel:+34 " + phone).button.is-link.is-social
+					a(href="tel:+34 " + phone, rel="nofollow").button.is-link.is-social
 						span.icon
 							i.fa.fa-phone
 						span= phone
@@ -37,7 +37,7 @@ footer.footer.hero.is-primary.abs-container
 				span.line Calle Hoteles Belén Calle A, 12 <wbr>18009 Granada
 			.column.is-3
 				h3.subtitle Sobre nosotros
-				p: a Política de privacidad y cookies
+				p: a(rel="nofollow") Política de privacidad y cookies
 				p.field.toggle-on-jobform
 					button.button.is-info Trabaja con nosotros
 
