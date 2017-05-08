@@ -291,9 +291,12 @@ blockquote.card
 			margin: 0
 	& > .card-block
 		padding-top: 3rem
-
-.stars
-	color: #ffdb02
+		padding-bottom: 3rem
+		position: relative
+	.stars
+		color: #ffdb02
+		position: absolute
+		bottom: 1.5rem
 
 .quote
 	position: relative
@@ -577,10 +580,11 @@ header.hero.abs-container
 	cursor: pointer
 
 #map
-	height: 250
+	height: 100vh	
 	width: 100%
-	@media screen and (max-width: 768px)
-		height: 400	
+	@media screen and (min-width: 768px)
+		height: 200
+		max-width: 250
 
 .gm-style-cc, .gmnoprint
     display: none
