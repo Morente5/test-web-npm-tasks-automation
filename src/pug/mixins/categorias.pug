@@ -12,5 +12,5 @@ mixin categorias(title, ...subtitles)
 						each category, cat_name in menu.categories
 							.column
 								a(href="/"+category.slug)
-									div= cat_name
+									div= category.shortName
 									div: img.category-icon(src="/img/"+ category.slug +".svg", alt=cat_name)

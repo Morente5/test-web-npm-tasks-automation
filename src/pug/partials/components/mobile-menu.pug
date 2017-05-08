@@ -6,15 +6,15 @@ aside.menu.is-medium.is-hidden.is-hidden-tablet.animated.slideOutLeft
 					span.icon.is-pulled-left
 						i.fa.fa-caret-left
 			li
-				a.is-active= active.category
+				a.is-active= menu.categories[active.category].shortName
 				ul.animated
 					each service, ser_name in menu.categories[active.category].services
 						li
 							a(href="/"+menu.categories[active.category].slug+"/"+service.slug, class=(ser_name == active.service) ? 'is-active' : '')= ser_name
 		else
-			each category, cat_name in menu.categories
+			each category in menu.categories
 				li
-					a(href="/"+category.slug)= cat_name
+					a(href="/"+category.slug)= category.shortName
 						span.icon.dropdown-icon.is-pulled-right
 							i.fa.fa-caret-down
 					ul.animated(style='display:none;')

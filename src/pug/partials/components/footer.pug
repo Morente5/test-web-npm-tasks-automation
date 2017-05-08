@@ -4,8 +4,8 @@ footer.footer.hero.is-primary.abs-container
 		.columns
 			.column.is-2
 				h3.subtitle Braun Marketing & Consulting
-				each category, cat_name in menu.categories
-					p: a(href="/"+category.slug, rel="nofollow")= cat_name
+				each category in menu.categories
+					p: a(href="/"+category.slug, rel="nofollow")= category.shortName
 			.column.is-3
 				h3.subtitle Contacto
 				p

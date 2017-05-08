@@ -5,7 +5,8 @@ const  buildify = require('buildify'),
 		'./dev/js/forms.js',
 		'./dev/js/map.js',
 		'./dev/js/mobile-menu.js',
-		'./dev/js/sticky.js'
+		'./dev/js/sticky.js',
+		'./dev/js/faq.js'
 	],
 	filesCSS = [
 		'./dev/css/styles.css'

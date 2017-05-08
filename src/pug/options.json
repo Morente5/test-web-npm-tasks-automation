@@ -13,7 +13,7 @@
     "linkedin": "https://www.linkedin.com/company-beta/11083660/",
     "menu": {
         "categories": {
-            "Médicos": {
+            "Marketing Médico": {
                 "services": {
                     "Posicionamiento Natural": {
                         "slug": "posicionamiento-natural"
@@ -40,9 +40,10 @@
                         "slug": "consultoria"
                     }
                 },
-                "slug": "medicos"
+                "slug": "marketing-medico",
+                "shortName": "Médicos"
             },
-            "Fisioterapeutas": {
+            "Marketing para Fisioterapeutas": {
                 "services": {
                     "Posicionamiento SEO": {
                         "slug": "posicionamiento-seo"
@@ -69,9 +70,10 @@
                         "slug": "consultoria-estrategica"
                     }
                 },
-                "slug": "fisioterapeutas"
+                "slug": "marketing-para-fisioterapeutas",
+                "shortName": "Fisioterapeutas"
             },
-            "Odontólogos": {
+            "Marketing Odontológico": {
                 "services": {
                     "Posicionamiento Web": {
                         "slug": "posicionamiento-web"
@@ -98,9 +100,10 @@
                         "slug": "consultoria-empresarial"
                     }
                 },
-                "slug": "odontologos"
+                "slug": "marketing-odontologico",
+                "shortName": "Odontólogos"
             },
-            "Farmacéuticos": {
+            "Marketing Farmacéutico": {
                 "services": {
                     "Posicionamiento en Buscadores": {
                         "slug": "posicionamiento-en-buscadores"
@@ -127,9 +130,10 @@
                         "slug": "consultoria-de-negocio"
                     }
                 },
-                "slug": "farmaceuticos"
+                "slug": "marketing-farmaceutico",
+                "shortName": "Farmacéuticos"
             },
-            "Veterinarios": {
+            "Marketing Veterinario": {
                 "services": {
                     "SEO Local": {
                         "slug": "seo-local"
@@ -156,7 +160,8 @@
                         "slug": "asesoramiento-empresarial"
                     }
                 },
-                "slug": "veterinarios"
+                "slug": "marketing-veterinario",
+                "shortName": "Veterinarios"
             }
         }
     }

@@ -38,7 +38,7 @@
     "jpgresize": "mogrify -resize \"1024 >\" ./dist/img/*.jpg",
     "pngresize": "mogrify -resize \"1024 >\" ./dist/img/*.png",
     "clean": "rimraf ./dist/*",
-    "build:folders": "mkdirp ./dist/css ./dist/js ./dist/img ./dist/fonts ./dist/farmaceuticos ./dist/fisioterapeutas ./dist/medicos ./dist/odontologos ./dist/veterinarios",
+    "build:folders": "mkdirp ./dist/css ./dist/js ./dist/img ./dist/fonts",
     "build:frontend:w/uncss": "npm run uncss && npm run autoprefixer && npm run min:css-js && npm run useref && npm run htmlmin",
     "build:frontend": "npm run min:css-js && npm run useref && npm run htmlmin",
     "build:media": "npm run statics:dist && npm run fonts:dist && npm run imagemin && npm run webp && npm run svgmin && npm run gifmin",

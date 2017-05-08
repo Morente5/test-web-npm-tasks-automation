@@ -4,9 +4,9 @@ div.services-wrapper
             .hero-body.hero-title
                 .container
                     if (active.service)
-                        h2.title.is-spaced= "Más servicios para "+active.category
+                        h2.title.is-spaced= "Más servicios para "+menu.categories[active.category].shortName
                     else
-                        h2.title.is-spaced= "Servicios para "+active.category
+                        h2.title.is-spaced= "Servicios para "+menu.categories[active.category].shortName
         span.nav-wrapper
             .hero-body#nav-services.is-sticky
                 .container
