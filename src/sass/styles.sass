@@ -70,7 +70,7 @@ body
 
 .services-wrapper
 	background-color: $primary
-	section.hero
+	nav.hero
 		padding-bottom: 1.5rem
 		.title-wrapper
 			.hero-body
@@ -228,13 +228,24 @@ nav .field.url
 .nav-wrapper
 	//height: 52px
 .news
-	.card-header, .card-footer
-		padding: 0
-		box-shadow: none
-		border-radius: 0
+	.card-footer
+		height: 60px
+	.card-header
+		height: 80px
+		&, .card-footer
+			padding: 0
+			box-shadow: none
+			border-radius: 0
 		.card-header-title
-			img
+			padding-top: 0
+			padding-bottom: 0
+			margin: auto
+			height: auto
+			a, img
+				max-height: 60px
 				margin: auto
+	.card-block
+		padding: .75rem
 
 .menu.is-sticky.is-fixed
 	//background-color: darkgrey
@@ -328,6 +339,26 @@ input.from-url
 	&:hover
 		border-bottom-color: transparent
 
+.hero-body, .footer.hero
+	padding-left: .75rem
+	padding-right: .75rem
+	@media screen and (min-width: 769px)
+		padding-left: 1.5rem
+		padding-right: 1.5rem
+
+.modal-card
+	margin-left: .75rem
+	margin-right: .75rem
+	@media screen and (min-width: 769px)
+		margin: 0 auto
+
+address
+	font-style: inherit;
+
+
+.page
+	.content p, .content li
+		text-align: justify
 
 @media screen and (max-width: 980px)
 	#nav-categories
@@ -580,7 +611,7 @@ header.hero.abs-container
 	cursor: pointer
 
 #map
-	height: 100vh
+	height: 75vh
 	width: 100%
 	@media screen and (min-width: 768px)
 		height: 200

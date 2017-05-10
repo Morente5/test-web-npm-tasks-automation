@@ -95,11 +95,10 @@ html(lang='es')
         |  }
 
     block body
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAtxc2up_ZAi8C95WWzzc8RE72wB5tnF9w', async, defer)
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAtxc2up_ZAi8C95WWzzc8RE72wB5tnF9w&callback=loadMap', async, defer)
     // build:js /js/script.js 
     script(src='https://code.jquery.com/jquery-3.2.1.min.js')
     script(src='https://cdn.rawgit.com/leafo/sticky-kit/v1.1.2/jquery.sticky-kit.js')
-
     script(src='/js/forms.js')
     script(src='/js/map.js')
     script(src='/js/mobile-menu.js')

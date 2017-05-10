@@ -1,6 +1,6 @@
-$(document).ready(() => {
+function loadMap() {
     initMap(37.171204, -3.598550)
-});
+}
 
 function initMap(lat, lng) {
     let divMap = $("#map")[0]
