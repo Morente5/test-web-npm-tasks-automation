@@ -1,4 +1,2 @@
 User-Agent: *
-Disallow: /css/
-Disallow: /fonts/
 Sitemap: https://braunmarketingandconsulting.es/sitemap.xml

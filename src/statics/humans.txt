@@ -2,12 +2,11 @@
 
 /* TEAM */
 	Diseño y Programación Web: Alejandro Morente Campos
-	Contact: alejandro@braunmarketingandconsuling.es
+	Contact: a.morente@braunmarketingandconsuling.es
 	Twitter: @braunconsulting
-	From: 
 
 /* SITE */
-	Last update: 2017/04/25
+	Last update: 11/05/2017
 	Language: Español
 	Standars: HTML5, CSS3, JavaScript, PHP, MySQL
 	Components: Responsive Design, Node.js, NPM
