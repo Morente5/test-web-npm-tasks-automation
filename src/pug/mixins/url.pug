@@ -1,0 +1,22 @@
+mixin URL(cat, ser)
+    - cat = cat || active.category
+    - ser = ser || active.service
+    - output = baseURL
+    if (cat)
+        - output += menu.categories[cat].slug + '/'
+        if (ser)
+            - output += menu.categories[cat].services[ser].slug + '/'
+    return #{output}
+
+mixin nextServiceURL(cat, ser)
+    - cat = cat || active.category
+    - ser = ser || active.service
+    - output = baseURL
+    if (cat)
+        - output += menu.categories[cat].slug + '/'
+        if (ser)
+            - servicesArray = Object.keys(menu.categories[cat].services)
+            - nextSer = servicesArray[(servicesArray.indexOf(ser) + 1)]
+            if (nextSer)
+                - output += menu.categories[cat].services[nextSer].slug + '/'
+    return #{output}
