@@ -1,7 +1,0 @@
-include /mixins/header-text
-
-mixin header(text, containerId)
-    header.hero.is-fullheight.is-primary.abs-container(id=containerId)
-        div.absolute-full
-        include /partials/components/topbar
-        +header-text(text)

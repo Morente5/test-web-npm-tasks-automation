@@ -1,0 +1,19 @@
+- var headerID = 'header'
+if (active.category)
+    - headerID += '-' + active.category.replace(/\s+/g, '-').toLowerCase()
+    if (active.service)
+        - headerID += '-' + active.service.replace(/\s+/g, '-').toLowerCase()
+else
+    - headerID += '-inicio'
+header.hero.is-fullheight.is-primary.abs-container(id=headerID)
+    div.absolute-full
+    include /partials/components/topbar
+    .hero-body.container
+        .columns.is-gapless
+            if (active.service)
+                .column.is-8
+                    h1.title.is-spaced.is-2: strong= active.service
+                    p.subtitle.is-4 !{intro}
+            else
+                .column.is-8
+                    h1.title.is-2: strong !{intro}

@@ -1,12 +1,11 @@
 extends /partials/html-layout
-include /mixins/header
 include /mixins/url
 
 block variables
 
 block body
 	include /partials/components/mobile-menu
-	+header(intro, 'header-'+active.category.replace(/\s+/g, '-').toLowerCase()+'-'+active.service.replace(/\s+/g, '-').toLowerCase())
+	include /partials/components/header
 	#content-wrapper
 		include /partials/components/breadcrumbs
 		include /partials/components/servicios

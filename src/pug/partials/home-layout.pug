@@ -1,16 +1,24 @@
 extends /partials/html-layout
+include /mixins/url
 
 block variables
 
 block body
 	include /partials/components/mobile-menu
-	include /partials/components/error-header
-	
+	include /partials/components/header
 	#content-wrapper
+
+		include /partials/components/motivos
 
 		include /partials/components/categorias
 
+		block content
+
 		include /partials/components/auditoria
+		include /partials/components/prensa
+		include /partials/components/transparencia
+		
+		include /partials/components/testimonios
 
 		include /partials/components/nosotros
 		include /partials/components/footer
