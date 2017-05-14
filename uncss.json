@@ -2,8 +2,8 @@
     "ignore": [
     ],
     "stylesheets": [
+        "css/styles.css"
     ],
     "ignoreSheets": [
-        "./dist/css/styles.css"
     ]
 }

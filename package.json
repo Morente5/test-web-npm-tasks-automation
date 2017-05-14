@@ -24,7 +24,7 @@
     "dev:proxy": "browser-sync start --proxy localhost --directory --startPath / --serverStatic / --files ./dev --reload-delay=300 --reload-debounce=500",
     "watch:devserve": "parallelshell \"npm run dev:media\" \"npm run dev:serve\" \"npm run watch:metalang\"",
     "watch:proxy": "parallelshell \"npm run dev:proxy\" \"npm run watch:metalang\"",
-    "uncss": "uncss -u uncss.json \"./dev/*.+(html|php)\" > ./dist/css/styles.css",
+    "uncss": "uncss -u uncss.json \"./dev/**/*.+(html|php)\" > ./dist/css/styles.css",
     "autoprefixer": "postcss -u autoprefixer --autoprefixer.browsers \"> 5%, ie 10\" -r ./dist/css/styles.css",
     "min:css-js": "node npm-scripts/buildify",
     "useref": "useref \"./dev/**/*.+(html|php)\" ./dist",

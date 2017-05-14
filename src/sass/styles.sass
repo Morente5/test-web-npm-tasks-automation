@@ -1,4 +1,158 @@
 @import 'vars'
+@import 'font-awesome/scss/font-awesome'
+
+header.hero.abs-container
+	background-size: cover
+	background-position: center
+	nav
+		background-color: $primary
+
+	.absolute-full
+		opacity: .6
+	&#header
+		&-inicio
+			background-image: url('/img/inicio.jpg')
+		&-marketing-médico
+			background-image: url('/img/marketing-medico.jpg')
+			&-posicionamiento-natural
+				background-image: url('/img/marketing-medico.jpg')
+			&-sem
+				background-image: url('/img/marketing-medico.jpg')
+			&-healthcare-benchmarking
+				background-image: url('/img/marketing-medico.jpg')
+			&-diseño-web
+				background-image: url('/img/marketing-medico.jpg')
+			&-analítica-web
+				background-image: url('/img/marketing-medico.jpg')
+			&-social-media-marketing
+				background-image: url('/img/marketing-medico.jpg')
+			&-reputación-online-médica
+				background-image: url('/img/marketing-medico.jpg')
+			&-consultoría
+				background-image: url('/img/marketing-medico.jpg')
+		&-marketing-para-fisioterapeutas
+			background-image: url('/img/marketing-para-fisioterapeutas.jpg')
+			&-posicionamiento-seo
+				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
+			&-search-engine-marketing
+				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
+			&-benchmarking
+				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
+			&-desarrollo-web
+				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
+			&-análisis-web
+				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
+			&-social-marketing
+				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
+			&-gestión-de-reputación-online
+				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
+			&-consultoría-estratégica
+				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
+		&-marketing-odontológico
+			background-image: url('/img/marketing-odontologico.jpg')
+			&-posicionamiento-web
+				background-image: url('/img/marketing-odontologico.jpg')
+			&-google-adwords
+				background-image: url('/img/marketing-odontologico.jpg')
+			&-benchmarking-odontológico
+				background-image: url('/img/marketing-odontologico.jpg')
+			&-diseño-página-web
+				background-image: url('/img/marketing-odontologico.jpg')
+			&-analytics-google
+				background-image: url('/img/marketing-odontologico.jpg')
+			&-community-manager
+				background-image: url('/img/marketing-odontologico.jpg')
+			&-gestión-marca-online
+				background-image: url('/img/marketing-odontologico.jpg')
+			&-consultoría-empresarial
+				background-image: url('/img/marketing-odontologico.jpg')
+		&-marketing-farmacéutico
+			background-image: url('/img/marketing-farmaceutico.jpg')
+			&-posicionamiento-en-buscadores
+				background-image: url('/img/marketing-farmaceutico.jpg')
+			&-google-ads
+				background-image: url('/img/marketing-farmaceutico.jpg')
+			&-benchmarking-farmacéutico
+				background-image: url('/img/marketing-farmaceutico.jpg')
+			&-crear-página-web
+				background-image: url('/img/marketing-farmaceutico.jpg')
+			&-google-analytics
+				background-image: url('/img/marketing-farmaceutico.jpg')
+			&-redes-sociales
+				background-image: url('/img/marketing-farmaceutico.jpg')
+			&-reputación-online
+				background-image: url('/img/marketing-farmaceutico.jpg')
+			&-consultoría-de-negocio
+				background-image: url('/img/marketing-farmaceutico.jpg')
+		&-marketing-veterinario
+			background-image: url('/img/marketing-veterinario.jpg')
+			&-seo-local
+				background-image: url('/img/marketing-veterinario.jpg')
+			&-ppc
+				background-image: url('/img/marketing-veterinario.jpg')
+			&-benchmarking-veterinario
+				background-image: url('/img/marketing-veterinario.jpg')
+			&-maquetación-web
+				background-image: url('/img/marketing-veterinario.jpg')
+			&-analytics-web
+				background-image: url('/img/marketing-veterinario.jpg')
+			&-social-media-plan
+				background-image: url('/img/marketing-veterinario.jpg')
+			&-orm
+				background-image: url('/img/marketing-veterinario.jpg')
+			&-asesoramiento-empresarial
+				background-image: url('/img/marketing-veterinario.jpg')
+
+.breadcrumbs
+	ol
+		padding-left: 10px
+	ol, ol li
+		display: inline!important
+	.hero-body
+		padding: 1rem 1.5rem
+		border-bottom: solid rgba(255,255,255, .4) 1px
+		.icon.is-small
+			width: 1.5rem
+			height: 1.5rem
+	li:not(:last-child):after
+		content: ''
+		//content: ''
+		font-family: FontAwesome
+		padding-left: 10px
+		padding-right: 10px
+
+.video
+	position: relative
+	padding-bottom: 56.25% //* 16/9 ratio */
+	padding-top: 30px //* IE6 workaround*/
+	margin-top: 24
+	height: 0
+	overflow: hidden
+
+	iframe,
+	object,
+	embed
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+.is-not-scrollable
+	overflow: hidden!important
+
+.is-sticky
+	z-index: 100
+	background-color: $primary
+	//width: 100%
+
+.is-fixed
+	position: fixed
+	width: 100vw
+	top: 0
+	left: 0
+	right: 0
+
 @import 'bulma/bulma.sass'
 @import 'bootstrap/scss/variables'
 $grid-breakpoints: (xs: 0, sm: 769px, md: 768px, lg: 992px, xl: 1200px)
@@ -9,11 +163,17 @@ $grid-breakpoints: (xs: 0, sm: 769px, md: 768px, lg: 992px, xl: 1200px)
 	border-radius: 0
 	margin-top: 1.5rem
 	margin-bottom: 1.5rem
-@import 'font-awesome/scss/font-awesome'
+
 @import 'balloon-css/src/balloon'
 @import 'animate.css/animate'
 
+html
+	overflow: auto!important
+	overflow-x: hidden!important
 
+body
+	overflow-x: hidden
+	width: 100vw
 
 header.hero
 	//background-image: url(../img/Master-en-gestion-de-clinicas.jpg)
@@ -26,13 +186,13 @@ header.hero
 		.columns
 			width: 100%
 
-html
-	overflow: auto!important
-	overflow-x: hidden!important
-
-body
-	overflow-x: hidden
-	width: 100vw
+.is-brand
+	margin: 0px 12px
+	padding: 0
+	img
+		height: 52px
+		max-height: initial
+		width: auto
 
 .has-shadow
 	box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1)
@@ -107,64 +267,6 @@ aside.menu
 			border-radius: 0
 		.icon
 			height: 2.25rem
-
-.breadcrumbs
-	ol
-		padding-left: 10px
-	ol, ol li
-		display: inline!important
-	.hero-body
-		padding: 1rem 1.5rem
-		border-bottom: solid rgba(255,255,255, .4) 1px
-		.icon.is-small
-			width: 1.5rem
-			height: 1.5rem
-	li:not(:last-child):after
-		content: ''
-		//content: ''
-		font-family: FontAwesome
-		padding-left: 10px
-		padding-right: 10px
-
-.video
-	position: relative
-	padding-bottom: 56.25% //* 16/9 ratio */
-	padding-top: 30px //* IE6 workaround*/
-	margin-top: 24
-	height: 0
-	overflow: hidden
-
-	iframe,
-	object,
-	embed
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-
-.is-not-scrollable
-	overflow: hidden!important
-
-.is-brand
-	margin: 0px 12px
-	padding: 0
-	img
-		height: 52px
-		max-height: initial
-		width: auto
-
-.is-sticky
-	z-index: 100
-	background-color: $primary
-	//width: 100%
-
-.is-fixed
-	position: fixed
-	width: 100vw
-	top: 0
-	left: 0
-	right: 0
 
 .nav-item
 	a
@@ -355,7 +457,6 @@ input.from-url
 address
 	font-style: inherit;
 
-
 .page
 	.content p, .content li
 		text-align: justify
@@ -433,107 +534,6 @@ footer.footer
 	background-image: url("/img/testimonios.jpg")
 	background-position: center
 
-header.hero.abs-container
-	background-size: cover
-	background-position: center
-	nav
-		background-color: $primary
-
-	.absolute-full
-		opacity: .6
-	&#header
-		&-inicio
-			background-image: url('/img/inicio.jpg')
-		&-marketing-médico
-			background-image: url('/img/marketing-medico.jpg')
-			&-posicionamiento-natural
-				background-image: url('/img/marketing-medico.jpg')
-			&-sem
-				background-image: url('/img/marketing-medico.jpg')
-			&-healthcare-benchmarking
-				background-image: url('/img/marketing-medico.jpg')
-			&-diseño-web
-				background-image: url('/img/marketing-medico.jpg')
-			&-analítica-web
-				background-image: url('/img/marketing-medico.jpg')
-			&-social-media-marketing
-				background-image: url('/img/marketing-medico.jpg')
-			&-reputación-online-médica
-				background-image: url('/img/marketing-medico.jpg')
-			&-consultoría
-				background-image: url('/img/marketing-medico.jpg')
-		&-marketing-para-fisioterapeutas
-			background-image: url('/img/marketing-para-fisioterapeutas.jpg')
-			&-posicionamiento-seo
-				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
-			&-search-engine-marketing
-				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
-			&-benchmarking
-				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
-			&-desarrollo-web
-				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
-			&-análisis-web
-				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
-			&-social-marketing
-				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
-			&-gestión-de-reputación-online
-				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
-			&-consultoría-estratégica
-				background-image: url('/img/marketing-para-fisioterapeutas.jpg')
-		&-marketing-odontológico
-			background-image: url('/img/marketing-odontologico.jpg')
-			&-posicionamiento-web
-				background-image: url('/img/marketing-odontologico.jpg')
-			&-google-adwords
-				background-image: url('/img/marketing-odontologico.jpg')
-			&-benchmarking-odontológico
-				background-image: url('/img/marketing-odontologico.jpg')
-			&-diseño-página-web
-				background-image: url('/img/marketing-odontologico.jpg')
-			&-analytics-google
-				background-image: url('/img/marketing-odontologico.jpg')
-			&-community-manager
-				background-image: url('/img/marketing-odontologico.jpg')
-			&-gestión-marca-online
-				background-image: url('/img/marketing-odontologico.jpg')
-			&-consultoría-empresarial
-				background-image: url('/img/marketing-odontologico.jpg')
-		&-marketing-farmacéutico
-			background-image: url('/img/marketing-farmaceutico.jpg')
-			&-posicionamiento-en-buscadores
-				background-image: url('/img/marketing-farmaceutico.jpg')
-			&-google-ads
-				background-image: url('/img/marketing-farmaceutico.jpg')
-			&-benchmarking-farmacéutico
-				background-image: url('/img/marketing-farmaceutico.jpg')
-			&-crear-página-web
-				background-image: url('/img/marketing-farmaceutico.jpg')
-			&-google-analytics
-				background-image: url('/img/marketing-farmaceutico.jpg')
-			&-redes-sociales
-				background-image: url('/img/marketing-farmaceutico.jpg')
-			&-reputación-online
-				background-image: url('/img/marketing-farmaceutico.jpg')
-			&-consultoría-de-negocio
-				background-image: url('/img/marketing-farmaceutico.jpg')
-		&-marketing-veterinario
-			background-image: url('/img/marketing-veterinario.jpg')
-			&-seo-local
-				background-image: url('/img/marketing-veterinario.jpg')
-			&-ppc
-				background-image: url('/img/marketing-veterinario.jpg')
-			&-benchmarking-veterinario
-				background-image: url('/img/marketing-veterinario.jpg')
-			&-maquetación-web
-				background-image: url('/img/marketing-veterinario.jpg')
-			&-analytics-web
-				background-image: url('/img/marketing-veterinario.jpg')
-			&-social-media-plan
-				background-image: url('/img/marketing-veterinario.jpg')
-			&-orm
-				background-image: url('/img/marketing-veterinario.jpg')
-			&-asesoramiento-empresarial
-				background-image: url('/img/marketing-veterinario.jpg')
 
 .button
 	white-space: pre
