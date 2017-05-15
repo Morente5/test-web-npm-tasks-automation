@@ -186,7 +186,19 @@ header.hero
 		.columns
 			width: 100%
 
-.is-brand
+input.from-url
+	width: 50%
+	margin-right: 8px
+
+.control
+	display: inline-block
+
+@media screen and (max-width: 420px)
+	.nav-item .phone
+		display: none
+
+
+.nav-logo
 	margin: 0px 12px
 	padding: 0
 	img
@@ -268,35 +280,21 @@ aside.menu
 		.icon
 			height: 2.25rem
 
-.nav-item
-	a
-		flex-grow: 0
-	img
-		max-width: auto!important
-
-.nav-form.nav-item
-	justify-content: flex-end
-
 .card-header-title
 	max-height: 60px
 	img
 		max-height: 40px
 
-.nav-logo
-	overflow-x: hidden
-	img
-		z-index: 101
+// a.nav-item.social
+// 	padding: 6px 6px
 
-a.nav-item.social
-	padding: 6px 6px
+// .nav-form
+// 	max-width: 150%
+// 	padding-left: 0
 
-.nav-form
-	max-width: 150%
-	padding-left: 0
-
-nav .field.url
-	input
-		width: initial
+// nav .field.url
+// 	input
+// 		width: initial
 
 #nav-categories
 	//height: 52px
@@ -433,8 +431,6 @@ blockquote.card
 	&-thumb
 		background-color: #7396b2
 
-input.from-url
-	width: 50%
 
 .tabs.is-boxed a
 	border-radius: 0
@@ -483,20 +479,6 @@ address
 				display: block
 				li
 					display: block
-
-@media screen and (max-width: 768px)
-	.nav-form
-		justify-content: flex-end
-	input.from-url
-		width: 100%
-
-@media screen and (max-width: 600px)
-	.nav-item.is-brand
-		display: none
-
-@media screen and (max-width: 420px)
-	.nav-item.social.phone
-		display: none
 
 .abs-container
 	position: relative
