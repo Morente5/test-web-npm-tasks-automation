@@ -5,7 +5,7 @@
         span
         span
         span
-      .nav-logo
+      .nav-logo.is-hidden-mobile.image
         a.nav-item.is-brand(href="/")
           img(src='/img/braun_marketing_logo2.png', alt='Braun Marketing & Consulting')
     .nav-right.social-group
@@ -16,6 +16,9 @@
         a(href=twitter, rel="nofollow", target="_blank").nav-item.social
           span.icon
             i.fa.fa-twitter
+        a(href=instagram, rel="nofollow", target="_blank").nav-item.social
+          span.icon
+            i.fa.fa-instagram
         a(href=googleplus, rel="nofollow", target="_blank").nav-item.social
           span.icon
             i.fa.fa-google-plus
@@ -25,7 +28,7 @@
         a(href='tel:+34 '+phone, rel="nofollow").nav-item.social.phone.button.is-link.is-social
           span.icon
             i.fa.fa-phone
-          span= phone
+          span.is-hidden-mobile= phone
         .field-body
 
           .field.url.is-hidden-mobile
