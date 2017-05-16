@@ -10,11 +10,14 @@
         img(src='/img/braun_marketing_logo2.png', alt='Braun Marketing & Consulting')
     .nav-right.is-active
       .nav-item
-        .control
-          a(href='tel:+34 '+phone, rel="nofollow").button.is-link.is-social.phone
-            span.icon
-              i.fa.fa-phone
-            span= phone
-        .control
-          input.url.is-hidden-mobile.input.from-url(type='URL', placeholder='Introduce tu URL')
-          a.button.toggle-on-form.is-success Te auditamos GRATIS
+        .field.is-grouped
+          p.control.is-horizontal
+            a(href='tel:+34 '+phone, rel="nofollow").button.is-link.is-social.phone
+              span.icon
+                i.fa.fa-phone
+              span= phone
+          p.control.is-horizontal.is-expanded
+            input.url.is-hidden-mobile.input.from-url(type='URL', placeholder='Introduce tu URL')
+          p.control.is-horizontal
+            a.button.toggle-on-form.is-success Te auditamos GRATIS
+
