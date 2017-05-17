@@ -6,7 +6,7 @@ mixin URL(cat, ser)
         - output += menu.categories[cat].slug + '/'
         if (ser)
             - output += menu.categories[cat].services[ser].slug + '/'
-    return #{output}
+    | #{output}
 
 mixin nextServiceURL(cat, ser)
     - cat = cat || active.category
@@ -21,4 +21,4 @@ mixin nextServiceURL(cat, ser)
                 - output += menu.categories[cat].services[nextSer].slug + '/'
             else
                 - output += menu.categories[cat].services[0].slug + '/'
-    return #{output}
+    | #{output}

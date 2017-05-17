@@ -1,16 +1,11 @@
 section.hero.is-primary.breadcrumbs
     .hero-body
         .container
-            span.
-                Estás en:
+            span Estás en:
             ol
-                li
-                    a(href="/", rel="home") Inicio
+                li: a(href="/", rel="home") Inicio
                 if (active.service)
-                    li
-                        a(href="/"+menu.categories[active.category].slug, rel="up")= active.category
-                    li
-                        a(href="/"+menu.categories[active.category].slug+"/"+menu.categories[active.category].services[active.service].slug)= active.service
+                    li: a(href="/"+menu.categories[active.category].slug, rel="up")= active.category
+                    li: a(href="/"+menu.categories[active.category].slug+"/"+menu.categories[active.category].services[active.service].slug)= active.service
                 else
-                    li
-                        a(href="/"+menu.categories[active.category].slug)= active.category
+                    li: a(href="/"+menu.categories[active.category].slug)= active.category
