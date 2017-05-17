@@ -17,8 +17,8 @@ mixin nextServiceURL(cat, ser)
         if (ser)
             - servicesArray = Object.keys(menu.categories[cat].services)
             - nextSer = servicesArray[(servicesArray.indexOf(ser) + 1)]
-            if (nextSer)
+            if (servicesArray.indexOf(ser) < servicesArray.length - 1)
                 - output += menu.categories[cat].services[nextSer].slug + '/'
             else
-                - output += menu.categories[cat].services[0].slug + '/'
+                - output += menu.categories[cat].services[servicesArray[0]].slug + '/'
     | #{output}
