@@ -1,4 +1,5 @@
 html(lang='es')
+  include /mixins/url
   block variables
   head
     meta(charset='utf-8')
@@ -22,6 +23,7 @@ html(lang='es')
     link(rel='author', type='text/plain', href='/humans.txt')
     link(rel='sitemap', type='application/xml', title='Sitemap', href='/sitemap.xml')
     link(rel='stylesheet', href='/css/styles.css')
+    | <link rel="canonical" href="#{baseURL.replace(/\/+$/,'')}#[+URL]">
     // Google Tag Manager 
     script.
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
