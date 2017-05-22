@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://braunmarketingandconsulting.es [R,L]
+
+ErrorDocument 404 /error/404.html
