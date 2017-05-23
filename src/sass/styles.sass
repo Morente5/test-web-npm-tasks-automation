@@ -248,6 +248,26 @@ header.hero
 
 .is-rounded
 	border-radius: 50%
+	border: 1px solid $primary!important
+	i.fa
+		font-size: 25px
+	&:hover
+		i.fa
+			color: #fff
+		&.phone, &.question-i
+			background-color: #8DC63F!important
+		&.mail
+			background-color: #F7941E!important
+		&.facebook
+			background-color: #3B5998!important
+		&.twitter
+			background-color: #1DA1F3!important
+		&.instagram
+			background: radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%),linear-gradient(135deg,#234bd7 12%,#c33cbe 58%)
+		&.googleplus
+			background-color: #DB4437!important
+		&.linkedin
+			background-color: #007AB9!important
 
 .columns.align-bottom
 	align-items: flex-end
@@ -505,6 +525,12 @@ footer.footer
 		.card-content
 			margin: auto
 			text-align: center
+			.google-img
+				height: 35px
+			.fa
+				font-size: 30px
+			p
+				font-weight: 400
 
 #auditoria
 	background-image: url('/img/auditoria.jpg')
