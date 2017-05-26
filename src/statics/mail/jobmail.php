@@ -27,12 +27,12 @@ if (isset($_FILES["file"]) && $_FILES['file']['type'] == "application/pdf") {
 $completo = $nombre && $email && $telefono && $motivos && $cv;
 
 if ($completo) {
-  $passwordFile = "/password";
+  $passwordFile = "password";
   $fh = fopen($_SERVER['DOCUMENT_ROOT']."/../".$passwordFile, 'r');
   $password = fgets($fh);
   fclose($fh);
 
-  $transport = Swift_SmtpTransport::newInstance('smtp.braunmarketingandconsulting.es', 465, 'ssl')
+  $transport = Swift_SmtpTransport::newInstance('ssl0.ovh.net', 465, 'ssl')
     ->setUsername('contacto@braunmarketingandconsulting.es')
     ->setPassword($password)
     ;
