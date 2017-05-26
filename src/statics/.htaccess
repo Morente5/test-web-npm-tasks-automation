@@ -1,6 +1,24 @@
 RewriteEngine On
 
+RewriteBase /
+RewriteRule ^farmaceuticos$ https://braunmarketingandconsulting.es/marketing-farmaceutico/ [R=301,L]
+RewriteRule ^farmaceuticos/(.*)$ https://braunmarketingandconsulting.es/marketing-farmaceutico/$1 [R=301,L]
+
+RewriteRule ^fisioterapeutas$ https://braunmarketingandconsulting.es/marketing-para-fisioterapeutas/ [R=301,L]
+RewriteRule ^fisioterapeutas/(.*)$ https://braunmarketingandconsulting.es/marketing-para-fisioterapeutas/$1 [R=301,L]
+
+RewriteRule ^odontologos$ https://braunmarketingandconsulting.es/marketing-odontologicos/ [R=301,L]
+RewriteRule ^odontologos/(.*)$ https://braunmarketingandconsulting.es/marketing-odontologicos/$1 [R=301,L]
+
+RewriteRule ^medicos$ https://braunmarketingandconsulting.es/marketing-medico/ [R=301,L]
+RewriteRule ^medicos/(.*)$ https://braunmarketingandconsulting.es/marketing-medico/$1 [R=301,L]
+
+RewriteRule ^veterinarios$ https://braunmarketingandconsulting.es/marketing-veterinario/ [R=301,L]
+RewriteRule ^veterinarios/(.*)$ https://braunmarketingandconsulting.es/marketing-veterinario/$1 [R=301,L]
+
+
 RewriteCond %{SERVER_PORT} 80 
 RewriteRule ^(.*)$ https://braunmarketingandconsulting.es [R,L]
+
 
 ErrorDocument 404 /error/404.html
