@@ -1,11 +1,12 @@
 section.hero.is-primary
     .hero-body.has-text-centered
         .container
-            .columns.align-bottom
-                .column
-                    h2.title ¿Necesitas ayuda?
-                    h3.subtitle Nuestro equipo de consultores te asesorará GRATIS y sin compromiso
-                    .columns.is-mobile
+            .card-group#nosotros
+                .card.is-3.column
+                    .card-block
+                        h2.title ¿Necesitas ayuda?
+                        h3.subtitle Nuestro equipo de consultores te asesorará GRATIS y sin compromiso
+                    footer.card-footer.columns.is-mobile
                         .column
                             p
                                 a(href="tel:+34 " + phone, data-balloon="666 52 36 68", data-balloon-pos="down").button.is-large.is-primary.is-inverted.is-rounded.phone
@@ -16,10 +17,21 @@ section.hero.is-primary
                                 a(href="mailto:" + mail, data-balloon="contacto@braunmarketingandconsulting.es", data-balloon-pos="down").button.is-large.is-primary.is-inverted.is-rounded.mail
                                     span.icon
                                         i.fa.fa-envelope
-                .column
-                    h2.title Síguenos en las redes
-                    h3.subtitle Compartimos consejos e información útil para tu negocio
-                    .columns.is-mobile
+                .card.is-3.column
+                    .card-block
+                        h2.title Nuestro blog
+                        h3.subtitle de Marketing Online y Consultoría especializada en el sector sanitario
+                    footer.card-footer.columns.is-mobile
+                        .column
+                            p
+                                a(href="https://blog.braunmarketingandconsulting.es" data-balloon="Nuestro Blog", data-balloon-pos="down").button.is-large.is-primary.is-inverted.is-rounded.blog
+                                    span.icon
+                                        i.fa.fa-wordpress
+                .card.is-6.column
+                    .card-block
+                        h2.title Síguenos en las redes
+                        h3.subtitle Compartimos consejos e información útil para tu negocio
+                    footer.card-footer.columns.is-mobile
                         .column
                             p
                                 a(href=facebook, data-balloon="Facebook", data-balloon-pos="down", target="_blank").button.is-large.is-primary.is-inverted.is-rounded.facebook
@@ -45,4 +57,3 @@ section.hero.is-primary
                                 a(href=linkedin, data-balloon="Linkedin", data-balloon-pos="down", target="_blank").button.is-large.is-primary.is-inverted.is-rounded.linkedin
                                     span.icon
                                         i.fa.fa-linkedin
-
