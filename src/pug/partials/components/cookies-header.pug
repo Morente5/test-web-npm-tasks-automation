@@ -1,0 +1,11 @@
+header.hero.is-fullheight.is-primary.abs-container(id='header-inicio')
+    div.absolute-full
+    include /partials/components/topbar
+    .hero-body.container
+        .columns.is-gapless
+            .column.is-6
+                h1.title.is-2: strong= intro
+                a(href="/")
+                    span.icon.is-medium
+                        i.fa.fa-caret-left
+                    span.subtitle.is-3 Volver a inicio

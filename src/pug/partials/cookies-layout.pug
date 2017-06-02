@@ -1,0 +1,27 @@
+extends /partials/html-layout
+include /mixins/url
+block variables
+
+block body
+	include /partials/components/mobile-menu
+	include /partials/components/cookies-header
+
+	#content-wrapper
+
+		include /partials/components/categorias
+		section.hero.is-light.sticky-parent
+			.hero-body
+					.container
+						article.page
+								.content
+										block content
+
+		include /partials/components/auditoria
+		include /partials/components/prensa
+		include /partials/components/testimonios
+
+		include /partials/components/nosotros
+		include /partials/components/footer
+
+	include /partials/components/form
+	include /partials/components/jobform
