@@ -7,7 +7,7 @@ function initMap(lat, lng) {
     let initPosition = new google.maps.LatLng(37.1715711, -3.5888382);
     let coords = [initPosition];
     let map = new google.maps.Map(divMap, {
-        center: new google.maps.LatLng(37.1717038, -3.5937112),//initPosition,
+        center: initPosition,
         zoom: 15,
         disableDefaultUI: false,//true,
         styles:
@@ -65,7 +65,12 @@ function initMap(lat, lng) {
         position: initPosition,
         title: '#' + coords.length,
         map: map,
-        //icon: 'resources/marker.png',
+        icon: {
+          url: '/img/favicon.ico',
+          scaledSize: new google.maps.Size(32, 32), // scaled size
+          origin: new google.maps.Point(0, 0), // origin
+          anchor: new google.maps.Point(16, 32)
+        },
         animation: google.maps.Animation.DROP
     });
 }
