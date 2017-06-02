@@ -16,6 +16,7 @@ html(lang='es')
     meta(name='apple-mobile-web-app-capable', content='yes')
     meta(name='apple-mobile-web-app-status-bar-style', content='default')
     meta(name='google-site-verification', content='K5XTAYnh13eUvYVT8jvbWpnk0Gnr0nOvQYuMhA9aX3c')
+    block meta
     link(rel='apple-touch-startup-image', href='/img/logo.svg')
     link(rel='icon', type='image/x-icon', href='/img/favicon.ico')
     link(rel='icon', type='image/png', href='/img/logo.png')
@@ -24,20 +25,28 @@ html(lang='es')
     link(rel='sitemap', type='application/xml', title='Sitemap', href='/sitemap.xml')
     link(rel='stylesheet', href='/css/styles.css')
     | <link rel="canonical" href="#{baseURL.replace(/\/+$/,'')}#[+URL]">
-    // Google Tag Manager 
+    // Google Tag Manager
     script.
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-KWWRPVM');
-    // End Google Tag Manager 
+    // End Google Tag Manager
+    // Zendesk Chat
+    script.
+      window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+      d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+      _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+      $.src="https://v2.zopim.com/?4qnNUEth5RW9BU7sdukW7ZjOe7VDIN8J";z.t=+new Date;$.
+      type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    // End Zendesk Chat
   body(cz-shortcut-listen='true')
-    // Google Tag Manager (noscript) 
+    // Google Tag Manager (noscript)
     noscript: iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-KWWRPVM', height='0', width='0', style='display:none;visibility:hidden')
-    // End Google Tag Manager (noscript) 
+    // End Google Tag Manager (noscript)
     script(type="application/ld+json").
-      {  
+      {
         "@context": "http://schema.org",
         "@type": "WebSite",
         "@id": #website",
@@ -96,15 +105,22 @@ html(lang='es')
           |      }
         |    ]
         |  }
-
+    #acookies
+      .inner
+        | Braun Marketing & Consulting utiliza cookies propias y de terceros para recopilar información estadística sobre sus hábitos de navegación y así poder mejorar y personalizar su experiencia. Si continúa navegando consideramos que acepta el uso de cookies.
+        a.ok(href='javascript:void(0);', onclick='putCookie();')
+          b Aceptar
+        |
+        a.info(href='/politica-de-cookies', target='_blank') Más información
     block body
     script(src='https://code.jquery.com/jquery-3.2.1.min.js')
     script(src='https://cdn.rawgit.com/leafo/sticky-kit/v1.1.2/jquery.sticky-kit.js')
-    // build:js /js/script.js 
+    // build:js /js/script.js
+    script(src='/js/acookies.js')
     script(src='/js/forms.js')
     script(src='/js/map.js')
     script(src='/js/mobile-menu.js')
     script(src='/js/sticky.js')
     script(src='/js/faq.js')
-    // endbuild 
+    // endbuild
     script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAtxc2up_ZAi8C95WWzzc8RE72wB5tnF9w&callback=loadMap', async, defer)

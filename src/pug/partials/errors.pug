@@ -2,10 +2,13 @@ extends /partials/html-layout
 
 block variables
 
+block meta
+	meta(name="robots" content="noindex")
+
 block body
 	include /partials/components/mobile-menu
 	include /partials/components/error-header
-	
+
 	#content-wrapper
 
 		include /partials/components/categorias
