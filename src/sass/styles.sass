@@ -551,7 +551,7 @@ footer.footer
 		box-shadow: none
 		padding: 0 0 20 0
 		background: none
-	
+
 
 .button
 	white-space: pre
@@ -643,3 +643,31 @@ span.validation
 	font-size: .8rem
 	&.is-danger
 		color: $danger
+
+#acookies
+	display: none
+	position: fixed
+	left: 0px
+	right: 0px
+	bottom: 0px
+	padding: 20px
+	width: 100vw
+	text-align: center
+	min-height: 40px
+	background-color: rgba($primary, 0.8)
+	color: #fff
+	z-index: 99999999999
+	.inner
+		width: 100%
+		font-size: small
+		top: 30%
+		a
+			&.ok
+				padding: 4px
+				color: $success
+				text-decoration: none
+
+			&.info
+				padding-left: 5px
+				text-decoration: none
+				color: $info
