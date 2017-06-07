@@ -1,11 +1,5 @@
-- var headerID = 'header'
-if (active.category)
-    - headerID += '-' + active.category.replace(/\s+/g, '-').toLowerCase()
-    if (active.service)
-        - headerID += '-' + active.service.replace(/\s+/g, '-').toLowerCase()
-else
-    - headerID += '-inicio'
-header.hero.is-fullheight.is-primary.abs-container(id=headerID)
+header.hero.is-fullheight.is-primary.abs-container
+    img.absolute-bg(src=background)
     div.absolute-full
     include /partials/components/topbar
     .hero-body.container
