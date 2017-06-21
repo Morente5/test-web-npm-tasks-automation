@@ -4,10 +4,22 @@ html(lang='es-ES', prefix='og: http://ogp.me/ns#')
   if (!background)
     if (active.category)
       - var background = '/img/' + menu.categories[active.category].slug + '.jpg'
+      - var background1200 = '/img/' + menu.categories[active.category].slug + '-1200.jpg'
+      - var background992 = '/img/' + menu.categories[active.category].slug + '-992.jpg'
+      - var background768 = '/img/' + menu.categories[active.category].slug + '-768.jpg'
+      - var background576 = '/img/' + menu.categories[active.category].slug + '-576.jpg'
     else
       - var background = '/img/inicio.jpg'
+      - var background1200 = '/img/inicio-1200.jpg'
+      - var background992 = '/img/inicio-992.jpg'
+      - var background768 = '/img/inicio-768.jpg'
+      - var background576 = '/img/inicio-576.jpg'
   else
     - var background = '/img/inicio.jpg'
+    - var background1200= '/img/inicio-1200.jpg'
+    - var background992 = '/img/inicio-992.jpg'
+    - var background768 = '/img/inicio-768.jpg'
+    - var background576 = '/img/inicio-576.jpg'
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width,initial-scale=.9')

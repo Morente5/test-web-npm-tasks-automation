@@ -5,4 +5,10 @@ section.hero#text-left-img-right.is-primary
                 .container-left
                     h2.title  Transparencia, compromiso y consistencia son tres de nuestros valores fundamentales como consultores y profesionales del Marketing online
             .column
-                img(src="/img/transparencia.jpg", alt="Marketing Online")
+                picture
+                    source(media='(min-width: 1192px)', srcset="/img/transparencia.jpg")
+                    source(media='(min-width: 1000px)', srcset="/img/transparencia-600.jpg")
+                    source(media='(min-width: 768px)', srcset="/img/transparencia-576.jpg")
+                    source(media='(min-width: 576px)', srcset="/img/transparencia-768.jpg")
+                    source(media='(max-width: 575px)', srcset="/img/transparencia-496.jpg")
+                    img(srcset="/img/transparencia.jpg", alt="Marketing Online")

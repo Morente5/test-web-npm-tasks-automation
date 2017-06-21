@@ -1,5 +1,11 @@
 header.hero.is-fullheight.is-primary.abs-container
-    img.absolute-bg(src=background)
+    picture
+        source(media='(min-width: 1192px)', srcset=background)
+        source(media='(min-width: 1000px)', srcset=background1200)
+        source(media='(min-width: 768px)', srcset=background992)
+        source(media='(min-width: 576px)', srcset=background768)
+        source(media='(max-width: 575px)', srcset=background576)
+        img.absolute-bg(srcset=background, alt=title)
     div.absolute-full
     include /partials/components/topbar
     .hero-body.container
