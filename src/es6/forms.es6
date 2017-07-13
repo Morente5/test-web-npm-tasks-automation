@@ -196,6 +196,11 @@ $('form[name=auditoria]').submit(function(event) {
         success: function(data, textStatus, request) {
             $form.find('.field, button.is-success').addClass('is-hidden');
             $form.find('.modal-card-body .send-ok').removeClass('is-hidden');
+            // Facebook pixel event
+            fbq('track', 'CompleteRegistration', {
+                value: 0,
+                currency: '€'
+            });
             // ga.send
             setTimeout(function () {
                 $form.find('button.is-success').removeClass('is-loading')
