@@ -1,5 +1,5 @@
-let owl = $('.owl-carousel');
-let owlOptions = {
+let owlNews = $('.news.owl-carousel');
+let owlOptionsNews = {
   loop: true,
   margin: 15,
   autoplay: true,
@@ -19,30 +19,61 @@ let owlOptions = {
     }
   }
 }
+let owlTestimonios = $('.testimonios.owl-carousel');
+let owlOptionsTestimonios = {
+  loop: true,
+  margin: 15,
+  autoplay: true,
+  autoplayTimeout: 4000,
+  autoplayHoverPause: true,
+  responsiveClass: true,
+  responsive: {
+    0: {
+      items: 1,
+      nav: false,
+      dots: false
+    },
+    768: {
+      items: 2,
+      nav: false,
+      dots: true
+    }
+  }
+}
 
 // $('.play').on('click', function () {
-//   owl.trigger('play.owl.autoplay', [3000])
+//   owlNews.trigger('play.owlNews.autoplay', [3000])
 // })
 // $('.stop').on('click', function () {
-//   owl.trigger('stop.owl.autoplay')
+//   owlNews.trigger('stop.owlNews.autoplay')
 // })
 
 if ($(window).width() > 768) {
-  var owlActive = owl.owlCarousel(owlOptions);
+  let owlActiveNews = owlNews.owlCarousel(owlOptionsNews);
+  let owlActiveTestimonios = owlTestimonios.owlCarousel(owlOptionsTestimonios);
 } else {
-  owl.addClass('off');
+  owlNews.addClass('off');
+  owlTestimonios.addClass('off');
 }
 
 $(window).resize(function () {
   if ($(window).width() > 768) {
-    if ($('.owl-carousel').hasClass('off')) {
-      var owlActive = owl.owlCarousel(owlOptions);
-      owl.removeClass('off');
+    if ($('.news.owl-carousel').hasClass('off')) {
+      let owlActiveNews = owlNews.owlCarousel(owlOptionsNews);
+      owlNews.removeClass('off');
+    }
+    if ($('.testimonios.owl-carousel').hasClass('off')) {
+      let owlActiveTestimonios = owlTestimonios.owlCarousel(owlOptionsTestimonios);
+      owlTestimonios.removeClass('off');
     }
   } else {
-    if (!$('.owl-carousel').hasClass('off')) {
-      owl.addClass('off').trigger('destroy.owl.carousel');
-      owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
+    if (!$('.news.owl-carousel').hasClass('off')) {
+      owlNews.addClass('off').trigger('destroy.owlNews.carousel');
+      owlNews.find('.owl-stage-outer').children(':eq(0)').unwrap();
+    }
+    if (!$('.testimonios.owl-carousel').hasClass('off')) {
+      owlTestimonios.addClass('off').trigger('destroy.owlTestimonios.carousel');
+      owlTestimonios.find('.owl-stage-outer').children(':eq(0)').unwrap();
     }
   }
 });
