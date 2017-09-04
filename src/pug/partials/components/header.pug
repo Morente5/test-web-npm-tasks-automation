@@ -1,11 +1,16 @@
 header.hero.is-fullheight.is-primary.abs-container
-    picture
-        source(media='(min-width: 1192px)', srcset=background)
-        source(media='(min-width: 1000px)', srcset=background1200)
-        source(media='(min-width: 768px)', srcset=background992)
-        source(media='(min-width: 576px)', srcset=background768)
-        source(media='(max-width: 575px)', srcset=background576)
-        img.absolute-bg(srcset=background, alt=title)
+    if (home)
+        video.absolute-bg(autoplay loop poster='/img/Braun-front.jpg')
+            source(src='/img/Braun-front.webm', type='video/webm')
+            source(src='/img/Braun-front.mp4', type='video/mp4')
+    else
+        picture
+            source(media='(min-width: 1192px)', srcset=background)
+            source(media='(min-width: 1000px)', srcset=background1200)
+            source(media='(min-width: 768px)', srcset=background992)
+            source(media='(min-width: 576px)', srcset=background768)
+            source(media='(max-width: 575px)', srcset=background576)
+            img.absolute-bg(srcset=background, alt=title)
     div.absolute-full
     include /partials/components/topbar
     .hero-body.container
