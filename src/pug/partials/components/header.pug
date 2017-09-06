@@ -19,6 +19,9 @@ header.hero.is-fullheight.is-primary.abs-container
                 .column.is-8
                     h1.title.is-spaced.is-2: strong= active.service
                     p.subtitle.is-4 !{intro}
+            else if (home)
+                .column
+                    h1.title.is-1.has-text-centered: strong !{intro}
             else
                 .column.is-8
                     h1.title.is-2: strong !{intro}

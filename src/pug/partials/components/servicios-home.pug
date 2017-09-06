@@ -1,0 +1,10 @@
+div.services.hero.is-primary
+  .hero-body
+    .container
+      h2.title.is-spaced= "¿Conoces nuestros servicios?"
+      ul.columns.is-multiline.is-centered.has-text-centered
+        each service, ser_name in homeServices
+          li.service.column.is-narrow.is-4-tablet.is-2-desktop
+            img(src=service.img)
+            h3.title.is-5= ser_name
+            p.desc= service.desc

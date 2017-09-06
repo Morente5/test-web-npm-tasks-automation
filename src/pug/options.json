@@ -13,6 +13,44 @@
     "googleplus": "https://plus.google.com/105855248642282602595",
     "youtube": "https://www.youtube.com/channel/UCQOXYZLDZvxS69yG306XYQA",
     "linkedin": "https://www.linkedin.com/company-beta/11083660/",
+    "homeServices": {
+        "Posicionamiento Web (SEO)": {
+            "img": "/img/icon-seo.png",
+            "desc": "Trabajamos dentro y fuera de tu WEB para que aparezcas en los primeros resultados de búsqueda"
+        },
+        "SEM y Social Ads": {
+            "img": "/img/icon-sem.png",
+            "desc": "Creamos la campaña, los anuncios y encontramos las palabras clave para atraer clientes potenciales"
+        },
+        "Desarrollo Web": {
+            "img": "/img/icon-web.png",
+            "desc": "Le creamos su web, ecommerce y/o Blog con diseño adaptado a móvil, moderno y actualizado a la última tecnología"
+        },
+        "App": {
+            "img": "/img/icon-app.png",
+            "desc": "Ponemos a su disposición nuestra plataforma de Desarrollo de aplicaciones móviles a medida tanto para iOS como para Android"
+        },
+        "Social Media": {
+            "img": "/img/icon-social.png",
+            "desc": "Gestionamos y optimizamos sus redes sociales para que ofrezcan una imagen profesional y acorde a su marca"
+        },
+        "Analítica Web": {
+            "img": "/img/icon-analitica.png",
+            "desc": "Analizamos y hacemos seguimiento todas las campañas de marketing online para mejorar continuamente los resultados"
+        },
+        "Benchmarking": {
+            "img": "/img/icon-benchmarking.png",
+            "desc": "Realizamos informes sobre tu competencia en internet con el objetivo de tener controlada la competencia y saber lo que hacen o dónde invierten"
+        },
+        "Reputación Online": {
+            "img": "/img/icon-reputacion.png",
+            "desc": "Monitorizamos todo lo que se habla de su empresa y estamos pendiente para si hubiera una crisis reputacional actuar de inmediato"
+        },
+        "Consultoría": {
+            "img": "/img/icon-consultoria.png",
+            "desc": "Analizamos la situación de su empresa, detectamos puntos de mejoría e implementamos acciones para corregirlas"
+        }
+    },
     "menu": {
         "categories": {
             "Marketing Médico": {
