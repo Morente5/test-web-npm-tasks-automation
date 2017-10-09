@@ -1,24 +1,11 @@
 mixin URL(cat, ser)
     - cat = cat || active.category
     - ser = ser || active.service
-    - output = '/'
     if (cat)
-        - output += menu.categories[cat].slug + '/'
-        if (ser)
-            - output += menu.categories[cat].services[ser].slug + '/'
-    | #{output}
-
-mixin nextServiceURL(cat, ser)
-    - cat = cat || active.category
-    - ser = ser || active.service
-    - output = '/'
-    if (cat)
-        - output += menu.categories[cat].slug + '/'
-        if (ser)
-            - servicesArray = Object.keys(menu.categories[cat].services)
-            - nextSer = servicesArray[(servicesArray.indexOf(ser) + 1)]
-            if (servicesArray.indexOf(ser) < servicesArray.length - 1)
-                - output += menu.categories[cat].services[nextSer].slug + '/'
-            else
-                - output += menu.categories[cat].services[servicesArray[0]].slug + '/'
+        if (!ser)
+            - output = '/' + menu.categories[cat].slug + '/'
+        else if (ser === 'Apps')
+            - output = '/marketing-medico/' + menu.categories[cat].services[ser].slug + '/'
+        else
+            - output = '/' + menu.categories[cat].slug + '/' + menu.categories[cat].services[ser].slug + '/'
     | #{output}

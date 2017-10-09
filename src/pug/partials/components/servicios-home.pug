@@ -5,6 +5,6 @@ div.services.hero.is-primary
       ul.columns.is-multiline.is-centered.has-text-centered
         each service, ser_name in homeServices
           li.service.column.is-narrow.is-4-tablet.is-2-desktop
-            img(src=service.img)
+            img(src=service.img alt=ser_name title=ser_name)
             h3.title.is-5= ser_name
             p.desc= service.desc

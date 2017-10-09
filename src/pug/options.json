@@ -30,6 +30,10 @@
             "img": "/img/icon-app.png",
             "desc": "Ponemos a su disposición nuestra plataforma de Desarrollo de aplicaciones móviles a medida tanto para iOS como para Android"
         },
+        "ASO": {
+            "img": "/img/icon-aso.png",
+            "desc": "Optimizamos la ficha de tu App para que sea visible y esté en las primeras posiciones de App Store y Google Play"
+        },
         "Social Media": {
             "img": "/img/icon-social.png",
             "desc": "Gestionamos y optimizamos sus redes sociales para que ofrezcan una imagen profesional y acorde a su marca"
@@ -67,6 +71,9 @@
                     "Diseño Web": {
                         "slug": "diseno-web"
                     },
+                    "Apps": {
+                        "slug": "apps"
+                    },
                     "Analítica Web": {
                         "slug": "analitica-web"
                     },
@@ -96,6 +103,9 @@
                     },
                     "Desarrollo Web": {
                         "slug": "desarrollo-web"
+                    },
+                    "Apps": {
+                        "slug": "apps"
                     },
                     "Análisis Web": {
                         "slug": "analisis-web"
@@ -127,6 +137,9 @@
                     "Diseño Página Web": {
                         "slug": "diseno-pagina-web"
                     },
+                    "Apps": {
+                        "slug": "apps"
+                    },
                     "Analytics Google": {
                         "slug": "analytics-google"
                     },
@@ -157,6 +170,9 @@
                     "Crear Página Web": {
                         "slug": "crear-pagina-web"
                     },
+                    "Apps": {
+                        "slug": "apps"
+                    },
                     "Google Analytics": {
                         "slug": "google-analytics"
                     },
@@ -186,6 +202,9 @@
                     },
                     "Maquetación Web": {
                         "slug": "maquetacion-web"
+                    },
+                    "Apps": {
+                        "slug": "apps"
                     },
                     "Analytics Web": {
                         "slug": "analytics-web"

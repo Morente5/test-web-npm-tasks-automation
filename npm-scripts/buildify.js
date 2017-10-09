@@ -1,5 +1,6 @@
 const  buildify = require('buildify'),
 	filesJS = [
+		'./dev/js/acookies.js',
 		'./dev/js/forms.js',
 		'./dev/js/carousel.js',
 		'./dev/js/map.js',

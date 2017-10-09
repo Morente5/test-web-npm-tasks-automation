@@ -1,3 +1,10 @@
+$('.card.quote').matchHeight(
+  {
+    remove: true
+  }
+);
+$.fn.matchHeight._maintainScroll = true;
+
 let owlNews = $('.news.owl-carousel');
 let owlOptionsNews = {
   loop: true,
@@ -38,6 +45,12 @@ let owlOptionsTestimonios = {
       nav: false,
       dots: true
     }
+  },
+  onRefresh: function () {
+    $('.card.quote').matchHeight({ remove: true });
+  },
+  onRefreshed: function () {
+    $.fn.matchHeight._apply('.card.quote', { remove: true })
   }
 }
 

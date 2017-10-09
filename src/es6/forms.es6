@@ -26,7 +26,13 @@ function toggleOffForm(elem) {
     }
 }
 
+function newsletterCookie() {
+    setCookie('newsletter', '1', 30);
+}
 
+function newsletterSessionCookie() {
+    setCookie('newsletter', '1');
+}
 
 $(document).ready(() => {
 
@@ -42,6 +48,25 @@ $(document).ready(() => {
     });
     $('.toggle-off-jobform').click(function() {
         toggleOffForm('#modal-jobform');
+    });
+
+    let newsletterTimeout = null;
+
+    if (getCookie('newsletter') != "1") {
+        newsletterTimeout = setTimeout(() => toggleOnForm('#modal-newsletterform'), 30000);
+    }
+
+    $('.toggle-on-newsletterform').click(function() {
+        if (newsletterTimeout) {
+            clearTimeout(newsletterTimeout);
+        }
+        toggleOnForm('#modal-newsletterform');
+    });
+    $('.toggle-off-newsletterform').click(function() {
+				if (getCookie('newsletter') != "1") {
+					newsletterSessionCookie()
+				}
+        toggleOffForm('#modal-newsletterform');
     });
 
 
@@ -72,11 +97,11 @@ $(document).ready(() => {
             $(this).next().addClass('is-success');
             this.setCustomValidity('');
         }
-        
+
     })
 
 
-    $('input[name=nombre]').change(function (e) {
+        $('input[name=nombre], input[name=NAME]').change(function (e) {
         let value = $(this).val()
         let $span = $(this).parent().parent().find('span.validation')
         if (this.validity.valueMissing) {
@@ -136,7 +161,7 @@ $(document).ready(() => {
         }
     })
 
-    $('input[name=email]').change(function (e) {
+        $('input[name=email], input[name=EMAIL]').change(function (e) {
         let value = $(this).val()
         let $span = $(this).parent().parent().find('span.validation')
         if (this.validity.valueMissing) {
@@ -207,7 +232,7 @@ $('form[name=auditoria]').submit(function(event) {
                 $form.find('button.is-success').prop('disabled', false)
                 toggleOffForm($('#modal-form'))
             }, 3000);
-            
+
 
         },
         error: function (request, textStatus, errorThrown) {
@@ -323,4 +348,53 @@ $('form[name=llamamos]').submit(function (event) {
             }, 3000);
         }
     })
+})
+
+
+$('form[name=newsletter]').submit(function (event) {
+    event.preventDefault()
+
+    let $form = $(this);
+    let url = $form.attr("action");
+
+    $form.find('button.is-success').addClass('is-loading')
+    $form.find('button.is-success').prop('disabled', true)
+
+    $.ajax({
+        type: 'POST',
+        url: url,
+        data: $form.serialize(),
+        dataType: 'jsonp',
+
+        success: function (data, textStatus, request) {
+            $form.find('.field, button.is-success').addClass('is-hidden');
+            $form.find('.modal-card-body .send-ok').removeClass('is-hidden');
+            newsletterCookie()
+            // Facebook pixel event
+            // fbq('track', 'CompleteRegistration', {
+            // 	value: 0,
+            // 	currency: '€'
+            // });
+            // ga.send
+            setTimeout(function () {
+                $form.find('button.is-success').removeClass('is-loading')
+                $form.find('button.is-success').prop('disabled', false)
+                toggleOffForm($('#modal-newsletterform'))
+            }, 3000);
+
+
+        },
+        error: function (request, textStatus, errorThrown) {
+            $form.find('.field, button.is-success').addClass('is-hidden');
+            $form.find('.modal-card-body .send-fail').removeClass('is-hidden');
+            // ga.send
+            setTimeout(function () {
+                $form.find('button.is-success').removeClass('is-loading')
+                $form.find('button.is-success').prop('disabled', false)
+                $form.find('.field, button.is-success').removeClass('is-hidden');
+                $form.find('.modal-card-body .send-fail').addClass('is-hidden');
+            }, 3000);
+        }
+    })
+
 })

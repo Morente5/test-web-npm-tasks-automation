@@ -1,0 +1,28 @@
+.modal#modal-newsletterform
+	.modal-background.animated.fadeIn
+	form.modal-card(name="newsletter", action="//braunmarketingandconsulting.us15.list-manage.com/subscribe/post-json?u=d25d62f64751863b264bf4184&amp;id=3358ad979c&c=?", method="post")
+		header.modal-card-head
+			p.modal-card-title Suscríbete a nuestra newsletter
+			button.delete.toggle-off-newsletterform(type="button")
+		header.modal-card-head.modal-card-description
+			p Conoce lo último en marketing para el sector sanitario.</br> Te enviamos información sobre las últimas estrategias para ayudar a crecer tu clínica en el medio online
+		section.modal-card-body
+			.field
+				label.label(for='FNAME') Nombre
+					span.validation.is-danger
+				p.control
+					input.input(type='text', name='FNAME', placeholder='Nombre', pattern="^[a-zA-Z ]*$", required)
+			.field
+				label.label(for='EMAIL') Correo Electrónico
+					span.validation.is-danger
+				p.control.has-icon.has-icon-right
+					input.input(type='email', name='EMAIL', placeholder='Correo Electrónico', required)
+					span.icon.is-small
+						i.fa.fa-envelope
+			.hero.hero-body.send-ok.is-hidden.animated.fadeIn
+				.title.is-2.has-text-centered: strong Gracias por suscribirte. Se ha enviado un email de confirmación.
+			.hero.hero-body.send-fail.is-hidden.animated.fadeIn
+				.title.is-2.has-text-centered: strong Se ha producido un error inesperado.
+		footer.modal-card-foot
+			button.button.is-success Enviar
+			button.button.toggle-off-newsletterform(type="button") Cancelar
