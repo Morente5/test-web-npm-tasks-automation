@@ -53,7 +53,7 @@ $(document).ready(() => {
     let newsletterTimeout = null;
 
     if (getCookie('newsletter') != "1") {
-        newsletterTimeout = setTimeout(() => toggleOnForm('#modal-newsletterform'), 30000);
+        newsletterTimeout = setTimeout(() => toggleOnForm('#modal-newsletterform'), 60000);
     }
 
     $('.toggle-on-newsletterform').click(function() {
