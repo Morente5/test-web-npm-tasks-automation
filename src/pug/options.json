@@ -1,227 +1,284 @@
 {
-    "lang": "es",
-    "basedir": "D:\\braunM&C\\src\\pug",
-    "favicon": "/img/favicon.ico",
-    "logoPNG": "/img/logo.png",
-    "logoSVG": "/img/logo.svg",
-    "phone": "666 52 36 68",
-    "mail": "contacto@braunmarketingandconsulting.es",
-    "baseURL": "https://braunmarketingandconsulting.es/",
-    "twitter": "https://twitter.com/BraunConsulting",
-    "facebook": "https://www.facebook.com/Braun-Marketing-Consulting-1461669590532398/",
-    "instagram": "https://www.instagram.com/braun_marketing_consulting/",
-    "googleplus": "https://plus.google.com/105855248642282602595",
-    "youtube": "https://www.youtube.com/channel/UCQOXYZLDZvxS69yG306XYQA",
-    "linkedin": "https://www.linkedin.com/company-beta/11083660/",
-    "homeServices": {
-        "Posicionamiento Web (SEO)": {
-            "img": "/img/icon-seo.png",
-            "desc": "Trabajamos dentro y fuera de tu WEB para que aparezcas en los primeros resultados de búsqueda"
-        },
-        "SEM y Social Ads": {
-            "img": "/img/icon-sem.png",
-            "desc": "Creamos la campaña, los anuncios y encontramos las palabras clave para atraer clientes potenciales"
-        },
-        "Desarrollo Web": {
-            "img": "/img/icon-web.png",
-            "desc": "Le creamos su web, ecommerce y/o Blog con diseño adaptado a móvil, moderno y actualizado a la última tecnología"
-        },
-        "App": {
-            "img": "/img/icon-app.png",
-            "desc": "Ponemos a su disposición nuestra plataforma de Desarrollo de aplicaciones móviles a medida tanto para iOS como para Android"
-        },
-        "ASO": {
-            "img": "/img/icon-aso.png",
-            "desc": "Optimizamos la ficha de tu App para que sea visible y esté en las primeras posiciones de App Store y Google Play"
-        },
-        "Social Media": {
-            "img": "/img/icon-social.png",
-            "desc": "Gestionamos y optimizamos sus redes sociales para que ofrezcan una imagen profesional y acorde a su marca"
-        },
-        "Analítica Web": {
-            "img": "/img/icon-analitica.png",
-            "desc": "Analizamos y hacemos seguimiento todas las campañas de marketing online para mejorar continuamente los resultados"
-        },
-        "Benchmarking": {
-            "img": "/img/icon-benchmarking.png",
-            "desc": "Realizamos informes sobre tu competencia en internet con el objetivo de tener controlada la competencia y saber lo que hacen o dónde invierten"
-        },
-        "Reputación Online": {
-            "img": "/img/icon-reputacion.png",
-            "desc": "Monitorizamos todo lo que se habla de su empresa y estamos pendiente para si hubiera una crisis reputacional actuar de inmediato"
-        },
-        "Consultoría": {
-            "img": "/img/icon-consultoria.png",
-            "desc": "Analizamos la situación de su empresa, detectamos puntos de mejoría e implementamos acciones para corregirlas"
-        }
-    },
-    "menu": {
-        "categories": {
-            "Marketing Médico": {
-                "services": {
-                    "Posicionamiento Natural": {
-                        "slug": "posicionamiento-natural"
-                    },
-                    "SEM": {
-                        "slug": "sem"
-                    },
-                    "Healthcare Benchmarking": {
-                        "slug": "healthcare-benchmarking"
-                    },
-                    "Diseño Web": {
-                        "slug": "diseno-web"
-                    },
-                    "Apps": {
-                        "slug": "apps"
-                    },
-                    "Analítica Web": {
-                        "slug": "analitica-web"
-                    },
-                    "Social Media Marketing": {
-                        "slug": "social-media-marketing"
-                    },
-                    "Reputación Online Médica": {
-                        "slug": "reputacion-online-medica"
-                    },
-                    "Consultoría": {
-                        "slug": "consultoria"
-                    }
-                },
-                "slug": "marketing-medico",
-                "shortName": "Médicos"
-            },
-            "Marketing para Fisioterapeutas": {
-                "services": {
-                    "Posicionamiento SEO": {
-                        "slug": "posicionamiento-seo"
-                    },
-                    "Search Engine Marketing": {
-                        "slug": "search-engine-marketing"
-                    },
-                    "Benchmarking": {
-                        "slug": "benchmarking"
-                    },
-                    "Desarrollo Web": {
-                        "slug": "desarrollo-web"
-                    },
-                    "Apps": {
-                        "slug": "apps"
-                    },
-                    "Análisis Web": {
-                        "slug": "analisis-web"
-                    },
-                    "Social Marketing": {
-                        "slug": "social-marketing"
-                    },
-                    "Gestión de Reputación Online": {
-                        "slug": "gestion-de-reputacion-online"
-                    },
-                    "Consultoría Estratégica": {
-                        "slug": "consultoria-estrategica"
-                    }
-                },
-                "slug": "marketing-para-fisioterapeutas",
-                "shortName": "Fisioterapeutas"
-            },
-            "Marketing Odontológico": {
-                "services": {
-                    "Posicionamiento Web": {
-                        "slug": "posicionamiento-web"
-                    },
-                    "Google Adwords": {
-                        "slug": "google-adwords"
-                    },
-                    "Benchmarking Odontológico": {
-                        "slug": "benchmarking-odontologico"
-                    },
-                    "Diseño Página Web": {
-                        "slug": "diseno-pagina-web"
-                    },
-                    "Apps": {
-                        "slug": "apps"
-                    },
-                    "Analytics Google": {
-                        "slug": "analytics-google"
-                    },
-                    "Community Manager": {
-                        "slug": "community-manager"
-                    },
-                    "Gestión Marca Online": {
-                        "slug": "gestion-marca-online"
-                    },
-                    "Consultoría Empresarial": {
-                        "slug": "consultoria-empresarial"
-                    }
-                },
-                "slug": "marketing-odontologico",
-                "shortName": "Odontólogos"
-            },
-            "Marketing Farmacéutico": {
-                "services": {
-                    "Posicionamiento en Buscadores": {
-                        "slug": "posicionamiento-en-buscadores"
-                    },
-                    "Google Ads": {
-                        "slug": "google-ads"
-                    },
-                    "Benchmarking Farmacéutico": {
-                        "slug": "benchmarking-farmaceutico"
-                    },
-                    "Crear Página Web": {
-                        "slug": "crear-pagina-web"
-                    },
-                    "Apps": {
-                        "slug": "apps"
-                    },
-                    "Google Analytics": {
-                        "slug": "google-analytics"
-                    },
-                    "Redes Sociales": {
-                        "slug": "redes-sociales"
-                    },
-                    "Reputación Online": {
-                        "slug": "reputacion-online"
-                    },
-                    "Consultoría de Negocio": {
-                        "slug": "consultoria-de-negocio"
-                    }
-                },
-                "slug": "marketing-farmaceutico",
-                "shortName": "Farmacéuticos"
-            },
-            "Marketing Veterinario": {
-                "services": {
-                    "SEO Local": {
-                        "slug": "seo-local"
-                    },
-                    "PPC": {
-                        "slug": "ppc"
-                    },
-                    "Benchmarking Veterinario": {
-                        "slug": "benchmarking-veterinario"
-                    },
-                    "Maquetación Web": {
-                        "slug": "maquetacion-web"
-                    },
-                    "Apps": {
-                        "slug": "apps"
-                    },
-                    "Analytics Web": {
-                        "slug": "analytics-web"
-                    },
-                    "Social Media Plan": {
-                        "slug": "social-media-plan"
-                    },
-                    "ORM": {
-                        "slug": "orm"
-                    },
-                    "Asesoramiento Empresarial": {
-                        "slug": "asesoramiento-empresarial"
-                    }
-                },
-                "slug": "marketing-veterinario",
-                "shortName": "Veterinarios"
-            }
-        }
-    }
+		"lang": "es",
+		"basedir": "D:\\braunM&C\\src\\pug",
+		"favicon": "/img/favicon.ico",
+		"logoPNG": "/img/logo.png",
+		"logoSVG": "/img/logo.svg",
+		"phone": "666 52 36 68",
+		"mail": "contacto@braunmarketingandconsulting.es",
+		"baseURL": "https://braunmarketingandconsulting.es/",
+		"twitter": "https://twitter.com/BraunConsulting",
+		"facebook": "https://www.facebook.com/Braun-Marketing-Consulting-1461669590532398/",
+		"instagram": "https://www.instagram.com/braun_marketing_consulting/",
+		"googleplus": "https://plus.google.com/105855248642282602595",
+		"youtube": "https://www.youtube.com/channel/UCQOXYZLDZvxS69yG306XYQA",
+		"linkedin": "https://www.linkedin.com/company-beta/11083660/",
+		"homeServices": {
+				"Posicionamiento Web (SEO)": {
+						"img": "/img/icon-seo.png",
+						"desc": "Trabajamos dentro y fuera de tu WEB para que aparezcas en los primeros resultados de búsqueda"
+				},
+				"SEM y Social Ads": {
+						"img": "/img/icon-sem.png",
+						"desc": "Creamos la campaña, los anuncios y encontramos las palabras clave para atraer clientes potenciales"
+				},
+				"Desarrollo Web": {
+						"img": "/img/icon-web.png",
+						"desc": "Le creamos su web, ecommerce y/o Blog con diseño adaptado a móvil, moderno y actualizado a la última tecnología"
+				},
+				"App": {
+						"img": "/img/icon-app.png",
+						"desc": "Ponemos a su disposición nuestra plataforma de Desarrollo de aplicaciones móviles a medida tanto para iOS como para Android"
+				},
+				"ASO": {
+						"img": "/img/icon-aso.png",
+						"desc": "Optimizamos la ficha de tu App para que sea visible y esté en las primeras posiciones de App Store y Google Play"
+				},
+				"Social Media": {
+						"img": "/img/icon-social.png",
+						"desc": "Gestionamos y optimizamos sus redes sociales para que ofrezcan una imagen profesional y acorde a su marca"
+				},
+				"Analítica Web": {
+						"img": "/img/icon-analitica.png",
+						"desc": "Analizamos y hacemos seguimiento todas las campañas de marketing online para mejorar continuamente los resultados"
+				},
+				"Benchmarking": {
+						"img": "/img/icon-benchmarking.png",
+						"desc": "Realizamos informes sobre tu competencia en internet con el objetivo de tener controlada la competencia y saber lo que hacen o dónde invierten"
+				},
+				"Reputación Online": {
+						"img": "/img/icon-reputacion.png",
+						"desc": "Monitorizamos todo lo que se habla de su empresa y estamos pendiente para si hubiera una crisis reputacional actuar de inmediato"
+				},
+				"Consultoría": {
+						"img": "/img/icon-consultoria.png",
+						"desc": "Analizamos la situación de su empresa, detectamos puntos de mejoría e implementamos acciones para corregirlas"
+				}
+		},
+		"escoger": [
+			{
+				"img": "/img/escoger-multidisciplinar.svg",
+				"desc": "Porque ponemos a tu disposición un <span class='has-text-weight-semibold has-text-success'>equipo multidisciplinar</span>,<br /> especializado en cada una de las diferentes áreas del marketing digital con un coste muy inferior a contratar un solo perfil."
+			},
+			{
+				"img": "/img/escoger-tranquilidad.svg",
+				"desc": "Por <span class='has-text-weight-semibold has-text-info'>tranquilidad</span>.<br /> Tranquilidad de saber que tu negocio y estrategia online está en manos profesionales."
+			},
+			{
+				"img": "/img/escoger-transparencia.svg",
+				"desc": "Por <span class='has-text-weight-semibold has-text-danger'>transparencia</span>.<br /> Recibirás mensualmente un informe con todas las acciones que nuestro equipo ha llevado a cabo en su proyecto dividido por días."
+			},
+			{
+				"img": "/img/escoger-resultados.svg",
+				"desc": "Por los <span class='has-text-weight-semibold has-text-warning'>resultados</span>.<br /> No ofrecemos nada que no podamos conseguir."
+			},
+			{
+				"img": "/img/escoger-cercania.svg",
+				"desc": "Por la <span class='has-text-weight-semibold has-text-primary'>cercanía</span> con el cliente.<br /> Nos convertimos en un miembro más de la empresa."
+			},
+			{
+				"img": "/img/escoger-precios.svg",
+				"desc": "Por nuestros <span class='has-text-weight-semibold has-text-success'>precios</span>.<br /> Nuestro ratio resultado/coste es muy alto. Obtenemos mejores resultados a un mejor precio que la competencia."
+			},
+			{
+				"img": "/img/escoger-alerta.svg",
+				"desc": "Porque siempre estamos <span class='has-text-weight-semibold has-text-warning'>alerta</span>.<br /> Mínimo una vez al mes revisamos si hay algo que esté perjudicando o si alguna actualización del algoritmo de Google está penalizando."
+			},
+			{
+				"img": "/img/escoger-implicacion.svg",
+				"desc": "Por nuestra <span class='has-text-weight-semibold has-text-danger'>implicación</span><br /> en cada uno de nuestros proyectos."
+			},
+			{
+				"img": "/img/escoger-aprendizaje.svg",
+				"desc": "Por el continuo <span class='has-text-weight-semibold has-text-info'>aprendizaje</span>.<br /> En Braun Marketing no paramos de investigar nuevas técnicas en los servicios que ofrecemos con el objetivo de que los cambios repentinos en los algoritmos no afecten a su estrategia de marketing online."
+			},
+			{
+				"img": "/img/escoger-herramientas.svg",
+				"desc": "Porque usamos <span class='has-text-weight-semibold has-text-primary'>herramientas y softwares líderes</span> en el Mercado que pocas empresas pueden permitirse.<br /> Nos ayudan a obtener información y tendencias de tu público objetivo que de otra forma sería imposible."
+			}
+		],
+		"menu": {
+				"categories": {
+						"Marketing Médico": {
+								"services": {
+										"Posicionamiento Natural": {
+												"slug": "posicionamiento-natural"
+										},
+										"SEM": {
+												"slug": "sem"
+										},
+										"Healthcare Benchmarking": {
+												"slug": "healthcare-benchmarking"
+										},
+										"Diseño Web": {
+												"slug": "diseno-web"
+										},
+										"Apps": {
+												"slug": "apps"
+										},
+										"ASO": {
+												"slug": "aso"
+										},
+										"Analítica Web": {
+												"slug": "analitica-web"
+										},
+										"Social Media Marketing": {
+												"slug": "social-media-marketing"
+										},
+										"Reputación Online Médica": {
+												"slug": "reputacion-online-medica"
+										},
+										"Consultoría": {
+												"slug": "consultoria"
+										}
+								},
+								"slug": "marketing-medico",
+								"shortName": "Médicos"
+						},
+						"Marketing para Fisioterapeutas": {
+								"services": {
+										"Posicionamiento SEO": {
+												"slug": "posicionamiento-seo"
+										},
+										"Search Engine Marketing": {
+												"slug": "search-engine-marketing"
+										},
+										"Benchmarking": {
+												"slug": "benchmarking"
+										},
+										"Desarrollo Web": {
+												"slug": "desarrollo-web"
+										},
+										"Apps": {
+												"slug": "apps"
+										},
+										"ASO": {
+												"slug": "aso"
+										},
+										"Análisis Web": {
+												"slug": "analisis-web"
+										},
+										"Social Marketing": {
+												"slug": "social-marketing"
+										},
+										"Gestión de Reputación Online": {
+												"slug": "gestion-de-reputacion-online"
+										},
+										"Consultoría Estratégica": {
+												"slug": "consultoria-estrategica"
+										}
+								},
+								"slug": "marketing-para-fisioterapeutas",
+								"shortName": "Fisioterapeutas"
+						},
+						"Marketing Odontológico": {
+								"services": {
+										"Posicionamiento Web": {
+												"slug": "posicionamiento-web"
+										},
+										"Google Adwords": {
+												"slug": "google-adwords"
+										},
+										"Benchmarking Odontológico": {
+												"slug": "benchmarking-odontologico"
+										},
+										"Diseño Página Web": {
+												"slug": "diseno-pagina-web"
+										},
+										"Apps": {
+												"slug": "apps"
+										},
+										"ASO": {
+												"slug": "aso"
+										},
+										"Analytics Google": {
+												"slug": "analytics-google"
+										},
+										"Community Manager": {
+												"slug": "community-manager"
+										},
+										"Gestión Marca Online": {
+												"slug": "gestion-marca-online"
+										},
+										"Consultoría Empresarial": {
+												"slug": "consultoria-empresarial"
+										}
+								},
+								"slug": "marketing-odontologico",
+								"shortName": "Odontólogos"
+						},
+						"Marketing Farmacéutico": {
+								"services": {
+										"Posicionamiento en Buscadores": {
+												"slug": "posicionamiento-en-buscadores"
+										},
+										"Google Ads": {
+												"slug": "google-ads"
+										},
+										"Benchmarking Farmacéutico": {
+												"slug": "benchmarking-farmaceutico"
+										},
+										"Crear Página Web": {
+												"slug": "crear-pagina-web"
+										},
+										"Apps": {
+												"slug": "apps"
+										},
+										"ASO": {
+												"slug": "aso"
+										},
+										"Google Analytics": {
+												"slug": "google-analytics"
+										},
+										"Redes Sociales": {
+												"slug": "redes-sociales"
+										},
+										"Reputación Online": {
+												"slug": "reputacion-online"
+										},
+										"Consultoría de Negocio": {
+												"slug": "consultoria-de-negocio"
+										}
+								},
+								"slug": "marketing-farmaceutico",
+								"shortName": "Farmacéuticos"
+						},
+						"Marketing Veterinario": {
+								"services": {
+										"SEO Local": {
+												"slug": "seo-local"
+										},
+										"PPC": {
+												"slug": "ppc"
+										},
+										"Benchmarking Veterinario": {
+												"slug": "benchmarking-veterinario"
+										},
+										"Maquetación Web": {
+												"slug": "maquetacion-web"
+										},
+										"Apps": {
+												"slug": "apps"
+										},
+										"ASO": {
+												"slug": "aso"
+										},
+										"Analytics Web": {
+												"slug": "analytics-web"
+										},
+										"Social Media Plan": {
+												"slug": "social-media-plan"
+										},
+										"ORM": {
+												"slug": "orm"
+										},
+										"Asesoramiento Empresarial": {
+												"slug": "asesoramiento-empresarial"
+										}
+								},
+								"slug": "marketing-veterinario",
+								"shortName": "Veterinarios"
+						}
+				}
+		}
 }
