@@ -1,0 +1,13 @@
+section.hero.is-light.abs-container#why-us
+	//- .absolute-full
+	.hero-body
+		.container
+
+			h2.title ¿Por qué escoger nuestra agencia de Marketing Online?
+
+			.columns.is-multiline.is-desktop
+				each elem in escoger
+					.column.is-half-desktop
+						.level.is-mobile
+							img(src=elem.img alt=elem.desc title=elem.desc)
+							p.subtitle.is-6.description !{elem.desc}
