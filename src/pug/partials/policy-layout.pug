@@ -2,9 +2,12 @@ extends /partials/html-layout
 include /mixins/url
 block variables
 
+block meta
+	meta(name="robots" content="noindex")
+
 block body
 	include /partials/components/mobile-menu
-	include /partials/components/cookies-header
+	include /partials/components/policy-header
 
 	#content-wrapper
 

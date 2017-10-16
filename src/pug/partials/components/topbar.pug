@@ -1,22 +1,22 @@
 .hero-head
-  nav(class=home ? 'nav nav-home' : 'nav')
-    .nav-left
-      span.nav-toggle#menu-toggle
-        span
-        span
-        span
-      a.nav-item.nav-logo.is-hidden-mobile(href="/")
-        img(src='/img/braun_marketing_logo2.png', alt='Braun Marketing & Consulting')
-    .nav-right.is-active
-      .nav-item
-        .field.is-grouped
-          p.control.is-horizontal
-            a(href='tel:+34 '+phone, rel="nofollow").button.is-link.is-social.phone
-              span.icon
-                i.fa.fa-phone
-              span= phone
-          p.control.is-horizontal.is-expanded
-            input.url.is-hidden-mobile.input.from-url(type='URL', placeholder='Introduce tu URL')
-          p.control.is-horizontal
-            a.button.toggle-on-form.is-success Te auditamos GRATIS
+	nav(class=home ? 'navbar level is-mobile has-shadow navbar-home' : 'navbar level is-mobile has-shadow')
+		.level-left
+			.level-item
+				span.navbar-burger#menu-toggle
+					span
+					span
+					span
+			.level-item
+				a.navbar-brand.is-hidden-mobile(href="/")
+					img(src='/img/braun_marketing_logo2.png', alt='Braun Marketing & Consulting')
+		.level-right
+			.level-item
+				a(href='tel:+34 '+phone, rel="nofollow").button.is-link.is-social.phone
+					span.icon
+						i.fa.fa-phone
+					span= phone
+			.level-item
+				input.url.is-hidden-mobile.input.from-url(type='URL', placeholder='Introduce tu URL')
+			.level-item
+				a.button.toggle-on-form.is-success Te auditamos GRATIS
 

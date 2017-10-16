@@ -1,173 +1,173 @@
 html(lang='es-ES', prefix='og: http://ogp.me/ns#')
-  include /mixins/url
-  block variables
-  if (!background)
-    if (active.category)
-      - var background = '/img/' + menu.categories[active.category].slug + '.jpg'
-      - var background1200 = '/img/' + menu.categories[active.category].slug + '-1200.jpg'
-      - var background992 = '/img/' + menu.categories[active.category].slug + '-992.jpg'
-      - var background768 = '/img/' + menu.categories[active.category].slug + '-768.jpg'
-      - var background576 = '/img/' + menu.categories[active.category].slug + '-576.jpg'
-    else
-      - var background = '/img/inicio.jpg'
-      - var background1200 = '/img/inicio-1200.jpg'
-      - var background992 = '/img/inicio-992.jpg'
-      - var background768 = '/img/inicio-768.jpg'
-      - var background576 = '/img/inicio-576.jpg'
-  else
-    - var background = '/img/inicio.jpg'
-    - var background1200= '/img/inicio-1200.jpg'
-    - var background992 = '/img/inicio-992.jpg'
-    - var background768 = '/img/inicio-768.jpg'
-    - var background576 = '/img/inicio-576.jpg'
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width,initial-scale=.9')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    title= title
-    meta(name='description', content=description)
-    meta(name='HandheldFriendly', content='true')
-    meta(name='MobileOptimized', content='320')
-    meta(name='application-name', content='Braun Marketing and Consulting')
-    meta(name='theme-color', content='#294F6C')
-    meta(name='msapplication-TileColor', content='#294F6C')
-    meta(name='msapplication-TileImage', content='/img/logo.svg')
-    meta(name='apple-mobile-web-app-capable', content='yes')
-    meta(name='apple-mobile-web-app-status-bar-style', content='default')
-    meta(name='google-site-verification', content='K5XTAYnh13eUvYVT8jvbWpnk0Gnr0nOvQYuMhA9aX3c')
-    meta(name="twitter:card", content="summary_large_image")
-    meta(name="twitter:title", content=title)
-    meta(name="twitter:description", content=description)
-    meta(name="twitter:site", content="@BraunConsulting")
-    meta(name="twitter:image", content=baseURL.replace(/\/+$/,'') + background)
-    meta(name="twitter:creator", content="@BraunConsulting")
-    meta(property="og:locale", content='es_ES')
-    meta(property="og:title", content=title)
-    meta(property="og:type", content='website')
-    | <meta property="og:url" content="#{baseURL.replace(/\/+$/,'')}#[+URL]">
-    meta(property='og:description', content=description)
-    meta(property='og:image', content=baseURL.replace(/\/+$/,'') + background)
-    meta(property='og:site_name', content="Braun Marketing & Consulting")
-    block meta
-    link(rel='apple-touch-startup-image', href='/img/logo.svg')
-    link(rel='icon', type='image/x-icon', href='/img/favicon.ico')
-    link(rel='icon', type='image/png', href='/img/logo.png')
-    link(rel='apple-touch-icon', href='/img/logo.svg')
-    link(rel='author', type='text/plain', href='/humans.txt')
-    link(rel='sitemap', type='application/xml', title='Sitemap', href='/sitemap.xml')
-    link(rel='stylesheet', href='/css/styles.css')
-    | <link rel="canonical" href="#{baseURL.replace(/\/+$/,'')}#[+URL]">
-    // Google Tag Manager
-    script.
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-KWWRPVM');
-    // End Google Tag Manager
-    // Zendesk Chat
-    script.
-      window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-      d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-      _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-      $.src="https://v2.zopim.com/?4qnNUEth5RW9BU7sdukW7ZjOe7VDIN8J";z.t=+new Date;$.
-      type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
-    // End Zendesk Chat
-    // Hotjar Tracking Code
-    script.
-      (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:536208,hjsv:5};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-    // End Hotjar Tracking Code
-  body(cz-shortcut-listen='true')
-    // Google Tag Manager (noscript)
-    noscript: iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-KWWRPVM', height='0', width='0', style='display:none;visibility:hidden')
-    // End Google Tag Manager (noscript)
-    script(type="application/ld+json").
-      {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        "@id": "#website",
-        "url": "#{baseURL}",
-        "name": "Braun Marketing & Consulting",
-        "alternateName": "Braun Marketing Consulting SL"
-      }
-    script(type="application/ld+json").
-      {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "url": "#{baseURL}",
-        "logo": "#{baseURL}img/logo.png",
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "@id": "#CustomerService",
-            "contactType": "Customer Service",
-            "telephone": "+34 #{phone}",
-            "email": "contacto@braunmarketingandconsulting.es"
-          }
-        ],
-        "description": "Agencia de Marketing Online y Consultoría especializada en el sector sanitario. SEO, SEM, redes sociales, blog, diseño web, estudio de Mercado, estrategia online y pubilicidad son nuestros servicios. Si necesitas una Agencia de Marketing online de confianza nosotros somos lo que buscas",
-        "sameAs": [
-          "#{facebook}",
-          "#{twitter}",
-          "#{instagram}",
-          "#{googleplus}",
-          "#{youtube}",
-          "#{linkedin}"
-        ]
-      }
-    if (active.category)
-      script(type="application/ld+json")
-        |  {
-        |    "@context": "http://schema.org",
-        |    "@type": "BreadcrumbList",
-        |    "itemListElement": [
-        |      {
-        |        "@type": "ListItem",
-        |        "position": 1,
-        |        "item": {
-        |          "@id": "#{baseURL}#{menu.categories[active.category].slug}",
-        |          "name": "#{active.category}"
-        |        }
-        |      }
-        if (active.service)
-          |      ,
-          |      {
-          |        "@type": "ListItem",
-          |        "position": 2,
-          |        "item": {
-          |          "@id": "#{baseURL}#{menu.categories[active.category].slug}/#{menu.categories[active.category].services[active.service].slug}",
-          |          "name": "#{active.service}"
-          |        }
-          |      }
-        |    ]
-        |  }
-    #acookies
-      .inner
-        | Braun Marketing & Consulting utiliza cookies propias y de terceros para recopilar información estadística sobre sus hábitos de navegación y así poder mejorar y personalizar su experiencia. Si continúa navegando consideramos que acepta el uso de cookies.
-        a.ok(href='javascript:void(0);', onclick='putCookie();')
-          b Aceptar
-        |
-        a.info(href='/politica-de-cookies', target='_blank') Más información
-    block body
-    script(src='https://code.jquery.com/jquery-3.2.1.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js')
-    script(src='https://cdn.rawgit.com/leafo/sticky-kit/v1.1.2/jquery.sticky-kit.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js')
+	include /mixins/url
+	block variables
+	if (!background)
+		if (active.category)
+			- var background = '/img/' + menu.categories[active.category].slug + '.jpg'
+			- var background1200 = '/img/' + menu.categories[active.category].slug + '-1200.jpg'
+			- var background992 = '/img/' + menu.categories[active.category].slug + '-992.jpg'
+			- var background768 = '/img/' + menu.categories[active.category].slug + '-768.jpg'
+			- var background576 = '/img/' + menu.categories[active.category].slug + '-576.jpg'
+		else
+			- var background = '/img/inicio.jpg'
+			- var background1200 = '/img/inicio-1200.jpg'
+			- var background992 = '/img/inicio-992.jpg'
+			- var background768 = '/img/inicio-768.jpg'
+			- var background576 = '/img/inicio-576.jpg'
+	else
+		- var background = '/img/inicio.jpg'
+		- var background1200= '/img/inicio-1200.jpg'
+		- var background992 = '/img/inicio-992.jpg'
+		- var background768 = '/img/inicio-768.jpg'
+		- var background576 = '/img/inicio-576.jpg'
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width,initial-scale=.9')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		title= title
+		meta(name='description', content=description)
+		meta(name='HandheldFriendly', content='true')
+		meta(name='MobileOptimized', content='320')
+		meta(name='application-name', content='Braun Marketing and Consulting')
+		meta(name='theme-color', content='#294F6C')
+		meta(name='msapplication-TileColor', content='#294F6C')
+		meta(name='msapplication-TileImage', content='/img/logo.svg')
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style', content='default')
+		meta(name='google-site-verification', content='K5XTAYnh13eUvYVT8jvbWpnk0Gnr0nOvQYuMhA9aX3c')
+		meta(name="twitter:card", content="summary_large_image")
+		meta(name="twitter:title", content=title)
+		meta(name="twitter:description", content=description)
+		meta(name="twitter:site", content="@BraunConsulting")
+		meta(name="twitter:image", content=baseURL.replace(/\/+$/,'') + background)
+		meta(name="twitter:creator", content="@BraunConsulting")
+		meta(property="og:locale", content='es_ES')
+		meta(property="og:title", content=title)
+		meta(property="og:type", content='website')
+		| <meta property="og:url" content="#{baseURL.replace(/\/+$/,'')}#[+URL]">
+		meta(property='og:description', content=description)
+		meta(property='og:image', content=baseURL.replace(/\/+$/,'') + background)
+		meta(property='og:site_name', content="Braun Marketing & Consulting")
+		block meta
+		link(rel='apple-touch-startup-image', href='/img/logo.svg')
+		link(rel='icon', type='image/x-icon', href='/img/favicon.ico')
+		link(rel='icon', type='image/png', href='/img/logo.png')
+		link(rel='apple-touch-icon', href='/img/logo.svg')
+		link(rel='author', type='text/plain', href='/humans.txt')
+		link(rel='sitemap', type='application/xml', title='Sitemap', href='/sitemap.xml')
+		link(rel='stylesheet', href='/css/styles.css')
+		| <link rel="canonical" href="#{baseURL.replace(/\/+$/,'')}#[+URL]">
+		// Google Tag Manager
+		script.
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-KWWRPVM');
+		// End Google Tag Manager
+		// Zendesk Chat
+		script.
+			window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+			d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+			_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+			$.src="https://v2.zopim.com/?4qnNUEth5RW9BU7sdukW7ZjOe7VDIN8J";z.t=+new Date;$.
+			type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+		// End Zendesk Chat
+		// Hotjar Tracking Code
+		script.
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:536208,hjsv:5};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+		// End Hotjar Tracking Code
+	body(cz-shortcut-listen='true')
+		// Google Tag Manager (noscript)
+		noscript: iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-KWWRPVM', height='0', width='0', style='display:none;visibility:hidden')
+		// End Google Tag Manager (noscript)
+		script(type="application/ld+json").
+			{
+				"@context": "http://schema.org",
+				"@type": "WebSite",
+				"@id": "#website",
+				"url": "#{baseURL}",
+				"name": "Braun Marketing & Consulting",
+				"alternateName": "Braun Marketing Consulting SL"
+			}
+		script(type="application/ld+json").
+			{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"url": "#{baseURL}",
+				"logo": "#{baseURL}img/logo.png",
+				"contactPoint": [
+					{
+						"@type": "ContactPoint",
+						"@id": "#CustomerService",
+						"contactType": "Customer Service",
+						"telephone": "+34 #{phone}",
+						"email": "contacto@braunmarketingandconsulting.es"
+					}
+				],
+				"description": "Agencia de Marketing Online y Consultoría especializada en el sector sanitario. SEO, SEM, redes sociales, blog, diseño web, apps, estudio de Mercado, estrategia online y pubilicidad son nuestros servicios. Si necesitas una Agencia de Marketing online de confianza nosotros somos lo que buscas",
+				"sameAs": [
+					"#{facebook}",
+					"#{twitter}",
+					"#{instagram}",
+					"#{googleplus}",
+					"#{youtube}",
+					"#{linkedin}"
+				]
+			}
+		if (active.category)
+			script(type="application/ld+json")
+				|  {
+				|    "@context": "http://schema.org",
+				|    "@type": "BreadcrumbList",
+				|    "itemListElement": [
+				|      {
+				|        "@type": "ListItem",
+				|        "position": 1,
+				|        "item": {
+				|          "@id": "#{baseURL}#{menu.categories[active.category].slug}",
+				|          "name": "#{active.category}"
+				|        }
+				|      }
+				if (active.service)
+					|      ,
+					|      {
+					|        "@type": "ListItem",
+					|        "position": 2,
+					|        "item": {
+					|          "@id": "#{baseURL}#{menu.categories[active.category].slug}/#{menu.categories[active.category].services[active.service].slug}",
+					|          "name": "#{active.service}"
+					|        }
+					|      }
+				|    ]
+				|  }
+		#acookies
+			.inner
+				| Braun Marketing & Consulting utiliza cookies propias y de terceros para recopilar información estadística sobre sus hábitos de navegación y así poder mejorar y personalizar su experiencia. Si continúa navegando consideramos que acepta el uso de cookies.
+				button.button.is-info.is-small
+					a.info(rel="nofollow", href='/politica-de-cookies', target='_blank') Más información
+				button.button.is-success.is-small
+					a.ok(href='javascript:void(0);', onclick='putCookie();') Aceptar
+		block body
+		script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js')
+		script(src='https://cdn.rawgit.com/leafo/sticky-kit/v1.1.2/jquery.sticky-kit.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js')
 
-    // build:js /js/script.js
-    script(src='/js/acookies.js')
-    script(src='/js/carousel.js')
-    script(src='/js/forms.js')
-    script(src='/js/map.js')
-    script(src='/js/mobile-menu.js')
-    script(src='/js/sticky.js')
-    script(src='/js/faq.js')
-    // endbuild
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAtxc2up_ZAi8C95WWzzc8RE72wB5tnF9w&callback=loadMap', async, defer)
+		// build:js /js/script.js
+		script(src='/js/acookies.js')
+		script(src='/js/carousel.js')
+		script(src='/js/forms.js')
+		script(src='/js/map.js')
+		script(src='/js/mobile-menu.js')
+		script(src='/js/sticky.js')
+		script(src='/js/faq.js')
+		// endbuild
+		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAtxc2up_ZAi8C95WWzzc8RE72wB5tnF9w&callback=loadMap', async, defer)

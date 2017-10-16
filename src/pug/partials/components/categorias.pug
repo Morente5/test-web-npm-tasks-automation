@@ -1,15 +1,15 @@
 nav.hero.is-primary
-    .hero-body
-        .container
-            h2.title.is-spaced Nuestras acciones de Marketing online y consultoría harán que tus clientes te encuentren entre los primeros resultados
-            h3.subtitle ¿Crees que hoy en día tus conocimientos y experiencia son suficientes?
-            h3.subtitle Selecciona tu ámbito de trabajo y te diremos cómo ayudarte
-    span.nav-wrapper
-        .hero-body#nav-categories.is-sticky.hero.is-primary.has-shadow
-            .container
-                .tabs.is-medium.is-toggle.columns
-                    each category, cat_name in menu.categories
-                        .column
-                            a(href="/"+category.slug)
-                                div= category.shortName
-                                div: img.category-icon(src="/img/"+ category.slug +".svg", alt=cat_name)
+	.hero-body
+		.container
+			h2.title.is-spaced Nuestras acciones de Marketing online y consultoría harán que tus clientes te encuentren entre los primeros resultados
+			h3.subtitle ¿Crees que hoy en día tus conocimientos y experiencia son suficientes?
+			h3.subtitle Selecciona tu ámbito de trabajo y te diremos cómo ayudarte
+	span.nav-wrapper
+		.hero-body#nav-categories.is-sticky.hero.is-primary.has-shadow
+			.container
+				.columns
+					each category, cat_name in menu.categories
+						.column
+							a.category(href="/"+category.slug)
+								div.has-text-centered: img.category-icon(src="/img/"+ category.slug +".svg", alt=cat_name)
+								h3.title.is-size-4-mobile.is-size-6-tablet.is-size-5-desktop.is-size-4-widescreen.has-text-centered= category.shortName

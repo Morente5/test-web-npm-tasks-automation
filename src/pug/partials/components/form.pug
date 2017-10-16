@@ -40,6 +40,11 @@
 				label.label(for='sugerencia') Sugerencias (opcional)
 				p.control
 					textarea.textarea(name='sugerencia', placeholder='Escribe una sugerencia...')
+			.field
+				p.control
+					label.checkbox
+						input(type='checkbox' required)
+						|  Acepto la #[a(rel="nofollow", target="_blank" href="/politica-de-privacidad-cookies") política de privacidad y cookies].
 			.hero.hero-body.send-ok.is-hidden.animated.fadeIn
 				.title.is-2.has-text-centered: strong Su petición se está tramitando.
 				.title.is-2.has-text-centered: strong Nos pondremos en contacto con usted a la mayor brevedad posible.
