@@ -4,7 +4,7 @@ mixin URL(cat, ser)
     if (cat)
         if (!ser)
             - output = '/' + menu.categories[cat].slug + '/'
-        else if (ser === 'Apps')
+        else if (ser === 'Apps' || ser === 'ASO')
             - output = '/marketing-medico/' + menu.categories[cat].services[ser].slug + '/'
         else
             - output = '/' + menu.categories[cat].slug + '/' + menu.categories[cat].services[ser].slug + '/'
