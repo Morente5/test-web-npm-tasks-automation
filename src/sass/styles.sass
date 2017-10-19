@@ -6,7 +6,10 @@ header.hero.abs-container
 	background-size: cover
 	background-position: center
 	overflow: hidden
-	nav:not(.nav-home)
+	nav
+		box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px
+		background-color: transparent
+	nav:not(.navbar-home)
 		background-color: $primary
 
 	.absolute-full
@@ -106,12 +109,17 @@ header.hero
 		.columns
 			width: 100%
 
+
+@media screen and (min-width: 768px)
+	.navbar-burger
+		display: none
+
 @media screen and (max-width: 420px)
-	.nav-item .phone
+	nav.navbar .phone
 		display: none
 
 
-.nav-logo
+.navbar-brand
 	margin: 0px 12px
 	padding: 0
 	img
@@ -238,20 +246,49 @@ aside.menu
 #nav-categories
 	//height: 52px
 	padding: 0 0 48 0
-	&:not(:last-child)
-		margin-bottom: 0
-	.columns
-		text-align: center
+	// &:not(:last-child)
+	// 	margin-bottom: 0
+	// .columns
+	// 	text-align: center
 	&.is-fixed
 		padding: 0
-		a
-			display: inline-block
+		// a
+		// 	display: inline-block
+	a.category
+		padding: 0.5em 1em
+		display: block
+		&:hover
+			background-color: rgba(10, 10, 10, 0.1)
 	img.category-icon
 		width: 96px
 		margin: 16px
-	&:not(.is-fixed)
-		a
-			display: block
+	// &:not(.is-fixed)
+	// 	a
+	// 		display: block
+
+#why-us
+	.columns
+		vertical-align: middle
+		.column
+			margin-bottom: 1rem
+			.level
+				justify-content: start
+				img
+					height: 80px
+					width: 80px
+				.description
+					padding: .75rem
+			&:nth-child(even)
+				.level
+					flex-direction: row-reverse
+					.description
+						text-align: right
+				img
+					margin-left: 1rem
+			&:nth-child(odd)
+				img
+					margin-right: 1rem
+
 
 #nav-services
 	padding: 0 0 0 0
@@ -397,7 +434,7 @@ blockquote.card
 		margin: 0 auto
 
 address
-	font-style: inherit;
+	font-style: inherit
 
 .page
 	.content p, .content li
@@ -485,13 +522,13 @@ footer.footer
 
 .button.is-link.is-social
 	color: inherit
+	background-color: inherit
 	text-decoration: none
 	text-align: left
 	line-height: 1.2rem
 	user-select: initial
 	&:hover, &:active, &:focus
 		color: inherit
-		background-color: inherit
 		border: 0.8 trasparent
 		box-shadow: none
 
@@ -567,7 +604,7 @@ footer.footer
 	padding: .5rem
 
 .gm-style-cc, .gmnoprint
-    display: none
+		display: none
 
 span.validation
 	font-weight: 400
@@ -590,18 +627,12 @@ span.validation
 	z-index: 99999999999
 	.inner
 		width: 100%
+		line-height: 27px
 		font-size: small
 		top: 30%
 		a
-			&.ok
-				padding: 4px
-				color: $success
-				text-decoration: none
+			color: white
 
-			&.info
-				padding-left: 5px
-				text-decoration: none
-				color: $info
 
 .owl-carousel
 	&.off
