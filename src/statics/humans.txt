@@ -8,6 +8,6 @@
 /* SITE */
 	Last update: 11/05/2017
 	Language: Español
-	Standars: HTML5, CSS3, JavaScript, PHP, MySQL
+	Standars: HTML5, CSS3, JavaScript, Pug, Sass
 	Components: Responsive Design, Node.js, NPM
 	Software: Visual Studio Code, PowerShell, Chrome, Illustrator, Photoshop
