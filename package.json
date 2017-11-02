@@ -1,6 +1,6 @@
 {
   "name": "braun-marketing",
-  "version": "1.0.0",
+  "version": "8.9.1",
   "description": "Braun Marketing and Consulting",
   "main": "package.json",
   "scripts": {
@@ -78,7 +78,7 @@
     "animate.css": "^3.5.2",
     "balloon-css": "^0.5.0",
     "bootstrap": "^4.0.0-alpha.6",
-    "bulma": "^0.5.2",
+    "bulma": "^0.6.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "owl.carousel": "^2.2.0",
