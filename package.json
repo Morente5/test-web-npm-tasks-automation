@@ -1,7 +1,7 @@
 {
-  "name": "braun-marketing",
-  "version": "8.9.1",
-  "description": "Braun Marketing and Consulting",
+  "name": "test-web-npm-tasks-automation",
+  "version": "1.0.0",
+  "description": "pug, sass, babel automated with npm tasks to make Braun Marketing and Consulting website",
   "main": "package.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
