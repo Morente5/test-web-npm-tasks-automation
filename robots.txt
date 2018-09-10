@@ -1,0 +1,4 @@
+User-Agent: *
+Sitemap: https://braunmarketingandconsulting.es/sitemap.xml
+
+Disallow: /politica-de-privacidad-cookies/

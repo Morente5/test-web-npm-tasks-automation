@@ -1,0 +1,13 @@
+/* Braun Marketing & Consulting - https://braunmarketingandconsuling.es */
+
+/* TEAM */
+	Diseño y Programación Web: Alejandro Morente Campos
+	Contact: a.morente@braunmarketingandconsuling.es
+	Twitter: @braunconsulting
+
+/* SITE */
+	Last update: 11/05/2017
+	Language: Español
+	Standars: HTML5, CSS3, JavaScript, Pug, Sass
+	Components: Responsive Design, Node.js, NPM
+	Software: Visual Studio Code, PowerShell, Chrome, Illustrator, Photoshop
