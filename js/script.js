@@ -568,7 +568,7 @@ function initMap(mapSelector, position, text, url) {
         title: text,
         map: map,
         icon: {
-            url: '/img/pin.png',
+            url: '/test-web-npm-tasks-automation/img/pin.png',
             scaledSize: new google.maps.Size(48, 48), // scaled size
             origin: new google.maps.Point(0, 0), // origin
             anchor: new google.maps.Point(24, 48)
